@@ -215,15 +215,20 @@ font-size: small;
             
           <br>
           <?php if(!empty($remarks)) { ?>
-          <div class="row justify-content-around">
-                    <div class="col-12 col-sm-12 col-md-12 text-center">
-                        <div class="form-group">
-                            <label for="remarks" class="control-label">Observações da Requisição</label>
-                            <p style="width: 100%;"><?php echo isset($remarks) ? $remarks : '' ?></p>
-                        </div>
-                    </div>
-                </div>
-                <?php } ?>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
+<?php
+// Verificar a quantidade de linhas no texto anterior
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
+?>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
+</div>
+<?php } ?>
           <br>
                 <?php echo $etapa_mat_ou_ser == 1 ? "<h5 class='text-center'><a style='color:#f29f05'>MATERIAIS</a> SOLICITADOS</h5>" : "<h5 class='text-center'><a style='color:#035aa6'>SERVIÇOS</a> SOLICITADOS</h5>" ?>
               <br>
@@ -399,7 +404,7 @@ font-size: small;
 
                             <td class="py-1 px-2 cotacao_1">
 
-                            <div style="display: none;">
+                            <div style="display:none;">
 
                             <!-- botao da escolha da cotação -->
                             <input type="text" name="bot1[]" class="from-group" value="<?php echo $row['bot1'];?>">
@@ -412,12 +417,12 @@ font-size: small;
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_1_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot2[]" value="<?php echo $row['cot2']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot2[]" value="<?php echo $row['cot2']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_1_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot3[]" value="<?php echo $row['cot3']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot3[]" value="<?php echo $row['cot3']; ?>">
                             </div>
                             
                             <!-- cotacao 2 -->
@@ -429,12 +434,12 @@ font-size: small;
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_2_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot5[]" value="<?php echo $row['cot5']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot5[]" value="<?php echo $row['cot5']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_2_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot6[]" value="<?php echo $row['cot6']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot6[]" value="<?php echo $row['cot6']; ?>">
                         </div>
 
                             <!-- cotacao 3 -->
@@ -446,12 +451,12 @@ font-size: small;
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_3_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot8[]" value="<?php echo $row['cot8']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot8[]" value="<?php echo $row['cot8']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_3_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot9[]" value="<?php echo $row['cot9']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot9[]" value="<?php echo $row['cot9']; ?>">
                             </div>
 
                             </div><!-- fim hidden div -->
@@ -591,12 +596,12 @@ else{ ?>
     </div>
 <div class="card-body">
 <?php 
-        $imageURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name1;
-        $imageURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name2;
-        $imageURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name3;
-        $imageURL4 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name4;
-        $imageURL5 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name5;
-        $pdfURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name6;
+        $imageURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name1;
+        $imageURL2 = base_url . '/admin/anexo/upload_requisicao/'.$file_name2;
+        $imageURL3 = base_url . '/admin/anexo/upload_requisicao/'.$file_name3;
+        $imageURL4 = base_url . '/admin/anexo/upload_requisicao/'.$file_name4;
+        $imageURL5 = base_url . '/admin/anexo/upload_requisicao/'.$file_name5;
+        $pdfURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name6;
         ?>
 
 <!-------------------------------------------------- FILE 6 -------------------------------------------->
@@ -831,20 +836,36 @@ else{ ?>
                     </div> <!-- row -->
 <br>
                     
-                    <?php if (!empty($obs_aprovacao)) { ?>
+                    
                         <div class="d-flex justify-content-around">
-                        <div class="col-12 col-sm-12 col-md-6 text-center">
+                        <div class="col-12 col-sm-12 col-md-10 text-center">
                         <div class="form-group">
                             <label for="obs_aprovacao" class="control-label">Observação</label>
-                            <p style="width: 100%;"><?php echo isset($obs_aprovacao) ? $obs_aprovacao : '' ?></p>
+                            <textarea name="obs_aprovacao" tabindex="-1" id="obs_aprovacao" style="width:100%;" class="form-group text-center" onload="autoResizeTextarea(this)" oninput="autoResizeTextarea(this)"><?php echo isset($obs_aprovacao) ? $obs_aprovacao : '' ?></textarea>
                         </div>
                     </div>
                     </div>
-                            <?php } ?>
-                            
+
+                    
+                        
+
 
 </div>
-                </div><br><br>
+                </div>
+<!-- PARTE OMIE -->
+<!-- <div class="card card-outline card-primary">
+<div class="card-body">
+        <h6 class="text-center">OMIE</h6>
+        <div class="row justify-content-around">
+
+        <div class="col-12 col-sm-6 col-md-3 text-center">
+                        <label for="numero_omie" class="control-label">Número Omie *</label>
+                        <input type="text" name="numero_omie" id="numero_omie" class="form-control rounded-0" value="<.?php echo isset($numero_omie) ? $numero_omie : ''; ?>" required>
+                        </div>
+                    </div>
+                </div>
+</div> -->
+<br><br>
     </form> <!-- FECHA ORDER -->
 
     <div class="footer fixed-bottom card-footer">
@@ -948,7 +969,7 @@ fixedColumns:   {
         }) */
         $('#receive-form').submit(function(e){
 			e.preventDefault();
-            var _this = $(this)
+            var _this = $(this);
 			 $('.err-msg').remove();
 			
 
@@ -1048,28 +1069,7 @@ if (nome_aprovacao == nome_aprovacao2 || nome_aprovacao == nome_aprovacao3 || no
 
             bot1 = $(this).find('[name="bot1[]"]').val()
 
-            /* ped1 = $(this).find('[name="ped1[]"]').val() */
-
-
-/*             price = $(this).find('[name="price[]"]').val()
-            total = parseFloat(price) * parseFloat(qty)
-            $(this).find('[name="total[]"]').val(total)
-            $(this).find('.total').text(parseFloat(total).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2})) */
         })
-        /* $('table#list tbody input[name="total[]"]').each(function(){
-            sub_total += parseFloat($(this).val())
-        })
-        $('table#list tfoot .sub-total').text(parseFloat(sub_total).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2}))
-        var discount =   sub_total * (parseFloat($('[name="discount_perc"]').val()) /100)
-        sub_total = sub_total - discount;
-        var tax =   sub_total * (parseFloat($('[name="tax_perc"]').val()) /100)
-        grand_total = sub_total + tax
-        $('.discount').text(parseFloat(discount).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2}))
-        $('[name="discount"]').val(parseFloat(discount))
-        $('.tax').text(parseFloat(tax).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2}))
-        $('[name="tax"]').val(parseFloat(tax))
-        $('table#list tfoot .grand-total').text(parseFloat(grand_total).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2}))
-        $('[name="amount"]').val(parseFloat(grand_total))
-*/
+
     } 
 </script>

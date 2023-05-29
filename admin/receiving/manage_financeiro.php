@@ -191,15 +191,20 @@ body{
                 </div> <!-- fim linha -->
         
                 <?php if(!empty($remarks)) { ?>
-          <div class="row justify-content-around">
-          <div class="col" style="width:100%;">
-                <div class="form-group text-center">
-                <label for="remarks" class="control-label">Observações da Requisição</label>
-                <textarea name="remarks" id="remarks" rows="6" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? $remarks : '' ?></textarea>
-                </div>
-                </div>
-                </div>
-          <?php } ?>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
+<?php
+// Verificar a quantidade de linhas no texto anterior
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
+?>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
+</div>
+<?php } ?>
                  
 <br>
           <?php echo $etapa_mat_ou_ser == 1 ? "<h5 class='text-center'><a style='color:#f29f05'>MATERIAIS</a> SOLICITADOS</h5>" : "<h5 class='text-center'><a style='color:#035aa6'>SERVIÇOS</a> SOLICITADOS</h5>" ?>
@@ -443,46 +448,47 @@ body{
                       
                             <div class="row justify-content-around" style="min-width:400px;">
                             <?php if ($row['bot1']==='0'){ ?> <!-- cotacao 1 -->
-
-                            <div>
+                            
+                            <div style="min-width: 150px;">
                             <strong>Fornecedor</strong><br>
                             <?php echo $row['cot1']?> <!-- resultado 1 -->
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot2']?> <!-- resultado 1 -->
+                            echo number_format($row['cot2'], 2, ',', '.'); ?> <!-- resultado 1 -->
+
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot3']?> <!-- resultado 1 -->
+                            echo number_format($row['cot3'], 2, ',', '.'); ?> <!-- resultado 1 -->
                             </div>
 
                             <?php }
                              elseif ($row['bot1']==='1'){ ?> <!-- cotacao 2 -->
-                            
+
                             <div>
                             <strong>Fornecedor</strong><br>
                             <?php echo $row['cot4']?> <!-- resultado 2 -->
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot5']?> <!-- resultado 2 -->
+                            echo number_format($row['cot5'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot6']?> <!-- resultado 2 -->
+                            echo number_format($row['cot6'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <?php } 
@@ -494,19 +500,18 @@ body{
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot8']?> <!-- resultado 3 -->
+                            echo number_format($row['cot8'], 2, ',', '.'); ?> <!-- resultado 3 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot9']?> <!-- resultado 3 -->
-                            </div>
-
+                            echo number_format($row['cot9'], 2, ',', '.'); ?> <!-- resultado 3 -->
+                            </div>   
                             <?php }  
                             ?>
                             </div>
@@ -582,10 +587,10 @@ else{ ?>
 <div class="card-body">
       
 
-<?php
-$imageURL1 = base_url . 'admin/anexo/upload_servico/' . $servico_anexo1;
-$imageURL2 = base_url . 'admin/anexo/upload_servico/' . $servico_anexo2;
-$imageURL3 = base_url . 'admin/anexo/upload_servico/' . $servico_anexo3;
+<?php 
+$imageURL1 = base_url . '/admin/anexo/upload_servico/'.$servico_anexo1;
+$imageURL2 = base_url . '/admin/anexo/upload_servico/'.$servico_anexo2;
+$imageURL3 = base_url . '/admin/anexo/upload_servico/'.$servico_anexo3;
 ?>
 
 <!-------------------------------------------------- FILE 6 -------------------------------------------->

@@ -168,14 +168,19 @@ zoom: 90%;
             
           <br>
           <?php if(!empty($remarks)) { ?>
-          <div class="row justify-content-around">
-          <div class="col" style="width:100%;">
-                <div class="form-group text-center">
-                <label for="remarks" class="control-label">Observações da Requisição</label>
-                <textarea name="remarks" id="remarks" rows="6" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? $remarks : '' ?></textarea>
-                </div>
-                </div>
-                </div>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
+<?php
+// Verificar a quantidade de linhas no texto anterior
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
+?>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
+</div>
 <?php } ?>
 <br>
 
@@ -627,12 +632,12 @@ else{ ?>
     </div>
 <div class="card-body">
 <?php 
-        $imageURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name1;
-        $imageURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name2;
-        $imageURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name3;
-        $imageURL4 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name4;
-        $imageURL5 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name5;
-        $pdfURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name6;
+        $imageURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name1;
+        $imageURL2 = base_url . '/admin/anexo/upload_requisicao/'.$file_name2;
+        $imageURL3 = base_url . '/admin/anexo/upload_requisicao/'.$file_name3;
+        $imageURL4 = base_url . '/admin/anexo/upload_requisicao/'.$file_name4;
+        $imageURL5 = base_url . '/admin/anexo/upload_requisicao/'.$file_name5;
+        $pdfURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name6;
         ?>
 
 <!-------------------------------------------------- FILE 6 -------------------------------------------->
@@ -748,7 +753,8 @@ else{ ?>
 <?php } ?>
 <br><br>
 <div class="footer fixed-bottom card-footer">
-        <a class="col-2 col-sm-2 col-md-2 btn btn-outline-primary" style="width:100%;" href="<?php echo base_url.'/admin?page=servico' ?>"><strong>VOLTAR</strong></a>
+        <a class="col-2 col-sm-2 col-md-2 btn btn-outline-primary" style="width:100%;"
+        href="<?php echo base_url.'/admin?page=servico' ?>"><strong>VOLTAR</strong></a>
 </div>
 
 <script>

@@ -208,7 +208,7 @@ font-size: small;
           <br>
           <?php if(!empty($remarks)) { ?>
 <div class="row justify-content-around">
-<div class="col" style="width:100%;">
+<div class="col-md-10">
 <div class="form-group text-center">
 <label for="remarks" class="control-label">Observações da requisição</label>
 <?php
@@ -381,7 +381,7 @@ $rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visív
 
         <td class="obs_item">
         <div class="content esconderTexto">
-        <div style="width:100%; width:250px;">
+        <div style="width:100%; min-width:250px; max-width:250px;">
         <?php echo $row['obs_item']; ?>
         </div>
         </div>
@@ -418,12 +418,12 @@ $rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visív
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_1_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot2[]" value="<?php echo $row['cot2']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot2[]" value="<?php echo $row['cot2']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_1_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot3[]" value="<?php echo $row['cot3']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot3[]" value="<?php echo $row['cot3']; ?>">
                             </div>
                             
                             <!-- cotacao 2 -->
@@ -435,12 +435,12 @@ $rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visív
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_2_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot5[]" value="<?php echo $row['cot5']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot5[]" value="<?php echo $row['cot5']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_2_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot6[]" value="<?php echo $row['cot6']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot6[]" value="<?php echo $row['cot6']; ?>">
                         </div>
 
                             <!-- cotacao 3 -->
@@ -452,12 +452,12 @@ $rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visív
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_3_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot8[]" value="<?php echo $row['cot8']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot8[]" value="<?php echo $row['cot8']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_3_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot9[]" value="<?php echo $row['cot9']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot9[]" value="<?php echo $row['cot9']; ?>">
                             </div>
 
                             </div><!-- fim hidden div -->
@@ -465,23 +465,24 @@ $rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visív
                             <div class="row justify-content-around" style="min-width:400px;">
                             <?php if ($row['bot1']==='0'){ ?> <!-- cotacao 1 -->
                             
-                            <div>
+                            <div style="min-width: 150px;">
                             <strong>Fornecedor</strong><br>
                             <?php echo $row['cot1']?> <!-- resultado 1 -->
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>                            
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot2']?> <!-- resultado 1 -->
+                            echo number_format($row['cot2'], 2, ',', '.'); ?> <!-- resultado 1 -->
+
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot3']?> <!-- resultado 1 -->
+                            echo number_format($row['cot3'], 2, ',', '.'); ?> <!-- resultado 1 -->
                             </div>
 
                             <?php }
@@ -493,17 +494,17 @@ $rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visív
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot5']?> <!-- resultado 2 -->
+                            echo number_format($row['cot5'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot6']?> <!-- resultado 2 -->
+                            echo number_format($row['cot6'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <?php } 
@@ -515,17 +516,17 @@ $rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visív
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot8']?> <!-- resultado 3 -->
+                            echo number_format($row['cot8'], 2, ',', '.'); ?> <!-- resultado 3 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot9']?> <!-- resultado 3 -->
+                            echo number_format($row['cot9'], 2, ',', '.'); ?> <!-- resultado 3 -->
                             </div>   
                             <?php }  
                             ?>
@@ -533,40 +534,18 @@ $rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visív
                             </td>
 <td class="align-middle" style="min-width:100px;">
                             <div>
-                            <input type="number" tabindex="-1" step="any" class="form-control input-cotacao text-center" name="ped1[]" value="">
+                            <input type="number" tabindex="-1" step="any" class="form-control input-cotacao text-center" name="ped1[]" value="" required>
                             </div>
                             </td>
                         </tr>
                         <?php endwhile; ?>
                         <?php endif; ?>
                     </tbody>
-<!--                     <tfoot>
-                        <tr>
-                            <th class="text-right py-1 px-2" colspan="8">Sub Total</th>
-                            <th class="text-right py-1 px-2 sub-total">0</th>
-                        </tr>
-                        <tr>
-                            <th class="text-right py-1 px-2" colspan="8">Desconto <input style="width:40px !important" name="discount_perc" class='' type="number" min="0" max="100" value="<.?php echo isset($discount_perc) ? $discount_perc : 0 ?>">%
-                                <input type="hidden" name="discount" value="<.?php echo isset($discount) ? $discount : 0 ?>">
-                            </th>
-                            <th class="text-right py-1 px-2 discount"><.?php echo isset($discount) ? number_format($discount) : 0 ?></th>
-                        </tr>
-                        <tr>
-                            <th class="text-right py-1 px-2" colspan="8">Taxas <input style="width:40px !important" name="tax_perc" class='' type="number" min="0" max="100" value="<.?php echo isset($tax_perc) ? $tax_perc : 0 ?>">%
-                                <input type="hidden" name="tax" value="<.?php echo isset($discount) ? $discount : 0 ?>">
-                            </th>
-                            <th class="text-right py-1 px-2 tax"><.?php echo isset($tax) ? number_format($tax) : 0 ?></th>
-                        </tr>
-                        <tr>
-                            <th class="text-right py-1 px-2" colspan="8">Total
-                                <input type="hidden" name="amount" value="<.?php echo isset($discount) ? $discount : 0 ?>">
-                            </th>
-                            <th class="text-right py-1 px-2 grand-total">0</th>
-                        </tr>
-                    </tfoot> -->
+
                 </table>
                 </div>
 <br>
+
                 <?php if(!empty($obs_cotacao)) { ?>
         <div class="row justify-content-around">
         <div class="col-md-6 text-center">
@@ -629,12 +608,12 @@ else{ ?>
     </div>
 <div class="card-body">
 <?php 
-        $imageURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name1;
-        $imageURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name2;
-        $imageURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name3;
-        $imageURL4 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name4;
-        $imageURL5 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name5;
-        $pdfURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name6;
+        $imageURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name1;
+        $imageURL2 = base_url . '/admin/anexo/upload_requisicao/'.$file_name2;
+        $imageURL3 = base_url . '/admin/anexo/upload_requisicao/'.$file_name3;
+        $imageURL4 = base_url . '/admin/anexo/upload_requisicao/'.$file_name4;
+        $imageURL5 = base_url . '/admin/anexo/upload_requisicao/'.$file_name5;
+        $pdfURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name6;
         ?>
 
 <!-------------------------------------------------- FILE 6 -------------------------------------------->
@@ -889,8 +868,8 @@ fixedColumns:   {
 
         $('#receive-form').submit(function(e){
 			e.preventDefault();
-            var _this = $(this)
-			 $('.err-msg').remove();
+            var _this = $(this);
+            $('.err-msg').remove();
 			start_loader();
 			$.ajax({
 				url:_base_url_+"classes/Master.php?f=save_receiving",
@@ -925,76 +904,6 @@ fixedColumns:   {
 			})
 		})
 
-        if('<?php echo (isset($id) && $id > 0) || (isset($po_id) && $po_id > 0) ?>' == 1){
-            calc()
-            $('#supplier_id').attr('readonly','readonly')
-            $('#req_date').attr('readonly','readonly')
-            $('#req_unidade').attr('readonly','readonly')
-            $('#req_requisitante').attr('readonly','readonly')
-            $('#req_projeto').attr('readonly','readonly')
-            $('#req_setor_util').attr('readonly','readonly')
-            $('#req_proj_nome').attr('readonly','readonly')
-            $('#req_proj_cod').attr('readonly','readonly')
-            $('#remarks').attr('readonly','readonly')
-
-            $('table#list tbody tr .rem_row').click(function(){
-                rem($(this))
-            })
-                console.log('test')
-            $('[name="qty[]"],[name="discount_perc"],[name="tax_perc"]').on('input',function(){
-                calc()
-            })
-        }
     })
-    function rem(_this){
-        _this.closest('tr').remove()
-        calc()
-        if($('table#list tbody tr').length <= 0)
-            $('#supplier_id').removeAttr('readonly')
-    }
-    function calc(){
-        var sub_total = 0;
-        var grand_total = 0;
-        var discount = 0;
-        var tax = 0;
-        $('table#list tbody tr').each(function(){
-            qty = $(this).find('[name="qty[]"]').val()
-            cot1 = $(this).find('[name="cot1[]"]').val()
-            cot2 = $(this).find('[name="cot2[]"]').val()
-            cot3 = $(this).find('[name="cot3[]"]').val()
 
-            cot4 = $(this).find('[name="cot4[]"]').val()
-            cot5 = $(this).find('[name="cot5[]"]').val()
-            cot6 = $(this).find('[name="cot6[]"]').val()
-            cot7 = $(this).find('[name="cot7[]"]').val()
-            cot8 = $(this).find('[name="cot8[]"]').val()
-            cot9 = $(this).find('[name="cot9[]"]').val()
-
-
-            bot1 = $(this).find('[name="bot1[]"]').val()
-
-            ped1 = $(this).find('[name="ped1[]"]').val()
-
-
-/*             price = $(this).find('[name="price[]"]').val()
-            total = parseFloat(price) * parseFloat(qty)
-            $(this).find('[name="total[]"]').val(total)
-            $(this).find('.total').text(parseFloat(total).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2})) */
-        })
-        /* $('table#list tbody input[name="total[]"]').each(function(){
-            sub_total += parseFloat($(this).val())
-        })
-        $('table#list tfoot .sub-total').text(parseFloat(sub_total).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2}))
-        var discount =   sub_total * (parseFloat($('[name="discount_perc"]').val()) /100)
-        sub_total = sub_total - discount;
-        var tax =   sub_total * (parseFloat($('[name="tax_perc"]').val()) /100)
-        grand_total = sub_total + tax
-        $('.discount').text(parseFloat(discount).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2}))
-        $('[name="discount"]').val(parseFloat(discount))
-        $('.tax').text(parseFloat(tax).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2}))
-        $('[name="tax"]').val(parseFloat(tax))
-        $('table#list tfoot .grand-total').text(parseFloat(grand_total).toLocaleString('en-US',{style:'decimal',maximumFractionDigit:2}))
-        $('[name="amount"]').val(parseFloat(grand_total))
-*/
-    } 
 </script>

@@ -21,7 +21,7 @@ body{
 <!-- head fim -->
 
 
-<?php if($_settings->userdata('usuario_setor') == 'setor1') { ?>
+<?php if($_settings->userdata('usuario_setor') == 'ADM') { ?>
 <div id="pdf-setor1" class="text-center"></div>
 
 <?php } elseif($_settings->userdata('usuario_setor') == 'setor2') { ?>
@@ -52,7 +52,7 @@ body{
 <script>
 
 // pdf-setor1
-var url = 'http://192.168.0.5/teste_sistema/admin/anexo/upload_roteiro/1111ele.pdf?=<?=time();?>';
+var url = '<?php echo base_url; ?>' + 'admin/anexo/upload_parametro/1111ele.pdf?=' + Date.now();
 pdfjsLib.getDocument(url).promise.then(function(pdf) {
 
 // quando o PDF tem varias páginas

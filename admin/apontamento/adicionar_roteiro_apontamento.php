@@ -85,12 +85,12 @@ $query = $conn->query("SELECT * FROM apontamento_roteiro WHERE id = $id");
 if($query->num_rows > 0){
     while($row = $query->fetch_assoc()){
         // imagem - file_name
-        $imageURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_roteiro/'.$row["setor_mec"];
-        $imageURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_roteiro/'.$row["setor_ide"];
-        $imageURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_roteiro/'.$row["setor_eletri"];
-        $imageURL4 = 'http://192.168.0.5/sistema/admin/anexo/upload_roteiro/'.$row["setor_fin"];
-        $imageURL5 = 'http://192.168.0.5/sistema/admin/anexo/upload_roteiro/'.$row["setor_exp"];
-        $pdfURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_roteiro/'.$row["setor_eletro"];
+        $imageURL1 = base_url . '/admin/anexo/upload_roteiro/'.$row["setor_mec"];
+        $imageURL2 = base_url . '/admin/anexo/upload_roteiro/'.$row["setor_ide"];
+        $imageURL3 = base_url . '/admin/anexo/upload_roteiro/'.$row["setor_eletri"];
+        $imageURL4 = base_url . '/admin/anexo/upload_roteiro/'.$row["setor_fin"];
+        $imageURL5 = base_url . '/admin/anexo/upload_roteiro/'.$row["setor_exp"];
+        $pdfURL1 = base_url . '/admin/anexo/upload_roteiro/'.$row["setor_eletro"];
 ?>
 <!-- FIM CONFIG BANCO DE DADOS -->
 <br><br>

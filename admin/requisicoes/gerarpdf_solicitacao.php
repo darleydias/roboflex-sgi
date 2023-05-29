@@ -144,15 +144,20 @@ table{
 
                 </div><br> <!-- FIM LINHA -->
            
-<?php if(!empty($remarks)) { ?>
-                <div class="row justify-content-around">
-                <div class="col" style="width:100%;">
-                <div class="form-group text-center">
-                <label for="remarks" class="control-label">Observações da Requisição</label>
-                <textarea name="remarks" id="remarks" rows="6" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? $remarks : '' ?></textarea>
-                </div>
-                </div>
-            </div>
+                <?php if(!empty($remarks)) { ?>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
+<?php
+// Verificar a quantidade de linhas no texto anterior
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
+?>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
+</div>
 <?php } ?>
             <br>
 

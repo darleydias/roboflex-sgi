@@ -266,7 +266,7 @@ while ($row = $supplier->fetch_assoc()) : ?>
                                 <option value="<?php echo $row['name'] ?>" <?php echo isset($unit) && $unit == $row['name'] ? "selected" : "" ?>><?php echo $row['name'] ?></option>
                             <?php endwhile; ?>
                         </select>
-                        <?php elseif($_settings->userdata('type') == '26' && $_settings->userdata('type') == '11'): ?>
+                        <?php elseif($_settings->userdata('type') == '26' || $_settings->userdata('type') == '11'): ?>
                             <select name="unit" id="unit" class="text-center" style="width:100%" multiple="multiple">
                             
                             <?php
@@ -971,10 +971,6 @@ role="button" aria-expanded="false" aria-controls="collapseFinalizacao"><strong>
 
 
 <script>
-
-
-// Restante do código...
-
 
 // If absolute URL from the remote server is provided, configure the CORS
 // header on that server.

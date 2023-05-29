@@ -71,7 +71,7 @@
     <script>
       $.widget.bridge('uibutton', $.ui.button)
     </script>
-    <!-- script custom -->
+    <!-- -->
     <script src="<?php echo base_url ?>plugins/custom/custom.min.js"></script>
     <!-- telefone -->
     <script src="https://cdn.rawgit.com/igorescobar/jQuery-Mask-Plugin/master/src/jquery.mask.js"></script>

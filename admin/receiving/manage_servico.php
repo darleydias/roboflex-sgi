@@ -228,15 +228,20 @@ $_SESSION['id_op_servico'] = $po_code;
                 </div> <!-- fim linha -->
         
                 <?php if(!empty($remarks)) { ?>
-          <div class="row justify-content-around">
-          <div class="col" style="width:100%;">
-                <div class="form-group text-center">
-                <label for="remarks" class="control-label">Observações da Requisição</label>
-                <textarea name="remarks" id="remarks" rows="6" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? $remarks : '' ?></textarea>
-                </div>
-                </div>
-                </div>
-          <?php } ?>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
+<?php
+// Verificar a quantidade de linhas no texto anterior
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
+?>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
+</div>
+<?php } ?>
                  
 <br>
           <?php echo $etapa_mat_ou_ser == 1 ? "<h5 class='text-center'><a style='color:#f29f05'>MATERIAIS</a> SOLICITADOS</h5>" : "<h5 class='text-center'><a style='color:#035aa6'>SERVIÇOS</a> SOLICITADOS</h5>" ?>
@@ -398,7 +403,7 @@ $_SESSION['id_op_servico'] = $po_code;
 
         <td class="obs_item">
         <div class="content esconderTexto">
-        <div style="width:100%; min-width:250px;">
+        <div style="width:100%; min-width:250px; max-width:250px;">
         <?php echo $row['obs_item']; ?>
         </div>
         </div>
@@ -434,12 +439,12 @@ $_SESSION['id_op_servico'] = $po_code;
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_1_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot2[]" value="<?php echo $row['cot2']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot2[]" value="<?php echo $row['cot2']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_1_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot3[]" value="<?php echo $row['cot3']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot3[]" value="<?php echo $row['cot3']; ?>">
                             </div>
                             
                             <!-- cotacao 2 -->
@@ -451,12 +456,12 @@ $_SESSION['id_op_servico'] = $po_code;
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_2_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot5[]" value="<?php echo $row['cot5']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot5[]" value="<?php echo $row['cot5']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_2_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot6[]" value="<?php echo $row['cot6']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot6[]" value="<?php echo $row['cot6']; ?>">
                         </div>
 
                             <!-- cotacao 3 -->
@@ -468,82 +473,82 @@ $_SESSION['id_op_servico'] = $po_code;
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_3_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot8[]" value="<?php echo $row['cot8']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot8[]" value="<?php echo $row['cot8']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_3_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot9[]" value="<?php echo $row['cot9']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot9[]" value="<?php echo $row['cot9']; ?>">
                             </div>
 
                             </div><!-- fim hidden div -->
                       
                             <div class="row justify-content-around" style="min-width:400px;">
                             <?php if ($row['bot1']==='0'){ ?> <!-- cotacao 1 -->
-
-                            <div style="max-width: 150px;">
+                            
+                            <div style="min-width: 150px;">
                             <strong>Fornecedor</strong><br>
                             <?php echo $row['cot1']?> <!-- resultado 1 -->
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot2']?> <!-- resultado 1 -->
+                            echo number_format($row['cot2'], 2, ',', '.'); ?> <!-- resultado 1 -->
+
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot3']?> <!-- resultado 1 -->
+                            echo number_format($row['cot3'], 2, ',', '.'); ?> <!-- resultado 1 -->
                             </div>
 
                             <?php }
                              elseif ($row['bot1']==='1'){ ?> <!-- cotacao 2 -->
-                            
-                            <div style="max-width: 150px;">
+
+                            <div>
                             <strong>Fornecedor</strong><br>
                             <?php echo $row['cot4']?> <!-- resultado 2 -->
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot5']?> <!-- resultado 2 -->
+                            echo number_format($row['cot5'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot6']?> <!-- resultado 2 -->
+                            echo number_format($row['cot6'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <?php } 
                              elseif ($row['bot1']==='2'){ ?> <!-- cotacao 3 -->
                             
-                            <div style="max-width: 150px;">
+                            <div>
                             <strong>Fornecedor</strong><br>
                             <?php echo $row['cot7']?> <!-- resultado 3 -->
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot8']?> <!-- resultado 3 -->
+                            echo number_format($row['cot8'], 2, ',', '.'); ?> <!-- resultado 3 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot9']?> <!-- resultado 3 -->
-                            </div>
-
+                            echo number_format($row['cot9'], 2, ',', '.'); ?> <!-- resultado 3 -->
+                            </div>   
                             <?php }  
                             ?>
                             </div>
@@ -600,9 +605,9 @@ $_SESSION['id_op_servico'] = $po_code;
 <!-- PARTE SERVIÇO -->
 
 <?php 
-        $servicoURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_servico/'.$po_code.'-recibo.pdf';
-        $servicoURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_servico/'.$po_code.'-nf.pdf';
-        $servicoURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_servico/'.$po_code.'-contrato.pdf';
+$servicoURL1 = base_url . '/admin/anexo/upload_servico/'.$po_code.'-recibo.pdf';
+$servicoURL2 = base_url . '/admin/anexo/upload_servico/'.$po_code.'-nf.pdf';
+$servicoURL3 = base_url . '/admin/anexo/upload_servico/'.$po_code.'-contrato.pdf';
 ?>
 
 <div class="card card-outline card-primary">
@@ -683,7 +688,6 @@ else{ ?>
 </div>
 <?php } ?>
 </div>
-
 </div> <!-- fim não contratual -->
 
 
@@ -765,20 +769,20 @@ $(document).ready(function() {
     $(".second0").css("background-color", "#6c757d");
     $(".second1").css("background-color", "#6c757d");
 
-    // remover valor do input anexo2
+    // remover valor do input anexo1
   if ($("#servico_anexo2").val()) {
     $("#servico_anexo2").val(null);
     $("#uploadFile2").val("Nenhum arquivo selecionado");
   }
 
-  // remover valor do input anexo3
+  // remover valor do input anexo1
   if ($("#servico_anexo3").val()) {
     $("#servico_anexo3").val(null);
     $("#uploadFile3").val("Nenhum arquivo selecionado");
   }
 
-  // remover valor do input NF
-  if ($("#nf_num_servico").val()){
+    // remover valor do input NF
+    if ($("#nf_num_servico").val()){
     $("#nf_num_servico").val(null);
   }
 
@@ -876,12 +880,12 @@ else{ ?>
       
 
 <?php 
-        $imageURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name1;
-        $imageURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name2;
-        $imageURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name3;
-        $imageURL4 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name4;
-        $imageURL5 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name5;
-        $pdfURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name6;
+        $imageURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name1;
+        $imageURL2 = base_url . '/admin/anexo/upload_requisicao/'.$file_name2;
+        $imageURL3 = base_url . '/admin/anexo/upload_requisicao/'.$file_name3;
+        $imageURL4 = base_url . '/admin/anexo/upload_requisicao/'.$file_name4;
+        $imageURL5 = base_url . '/admin/anexo/upload_requisicao/'.$file_name5;
+        $pdfURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name6;
         ?>
 
 <!-------------------------------------------------- FILE 6 -------------------------------------------->
@@ -1141,13 +1145,14 @@ fixedColumns:   {
 
 $('#receive-form').submit(function(e) {
     e.preventDefault();
-
+    var _this = $(this)
     $('.err-msg').remove();
+
     var escolhaServicoSelecionado = $(".escolha-servico:checked").val();
     var anexo1 = $("#servico_anexo1").val();
     if (escolhaServicoSelecionado == 0 && anexo1 != "") {
-
         // "Recibo" esta selecionado
+
         start_loader();
         $.ajax({
 				url:_base_url_+"classes/Master.php?f=save_receiving",
@@ -1159,7 +1164,7 @@ $('#receive-form').submit(function(e) {
                 type: 'POST',
                 dataType: 'json',
 				error:err=>{
-					console.log(err)
+					console.log(err);
 					alert_toast("Ocorreu um erro",'error');
 					end_loader();
 				},
@@ -1167,15 +1172,15 @@ $('#receive-form').submit(function(e) {
 					if(resp.status == 'success'){
                         location.replace(_base_url_+"admin/?page=servico");
 					}else if(resp.status == 'failed' && !!resp.msg){
-                        var el = $('<div>')
-                            el.addClass("alert alert-danger err-msg").text(resp.msg)
-                            _this.prepend(el)
-                            el.show('slow')
-                            end_loader()
+                        var el = $('<div>');
+                            el.addClass("alert alert-danger err-msg").text(resp.msg);
+                            _this.prepend(el);
+                            el.show('slow');
+                            end_loader();
                     }else{
 						alert_toast("Ocorreu um erro",'error');
 						end_loader();
-                        console.log(resp)
+                        console.log(resp);
 					}
                     $('html,body').animate({scrollTop:0},'fast')
 				}
@@ -1186,7 +1191,6 @@ $('#receive-form').submit(function(e) {
         var anexo2 = $(".anexo2").val();
         var anexo3 = $(".anexo3").val();
         if (servicoContratoSelecionado === undefined ||(servicoContratoSelecionado === 0 || anexo2 === "") ||(servicoContratoSelecionado === 1 && (anexo2 === "" || anexo3 === ""))){
-            
             // "servico-contrato" radio button not selected, so show error message
             var el = $('<div class="text-center">');
             el.addClass("alert alert-danger err-msg").text("Selecione as informações do serviço e realize os anexos");
@@ -1194,8 +1198,8 @@ $('#receive-form').submit(function(e) {
             el.show('slow');
             $('html,body').animate({ scrollTop: 0 }, 'fast');
             return false;
-        }
-        else {
+        } else {
+
             // "servico-contrato" radio button selected, so proceed with saving the form data
             start_loader();
             $.ajax({
@@ -1208,7 +1212,7 @@ $('#receive-form').submit(function(e) {
                 type: 'POST',
                 dataType: 'json',
 				error:err=>{
-					console.log(err)
+					console.log(err);
 					alert_toast("Ocorreu um erro",'error');
 					end_loader();
 				},
@@ -1216,15 +1220,15 @@ $('#receive-form').submit(function(e) {
 					if(resp.status == 'success'){
                         location.replace(_base_url_+"admin/?page=servico");
 					}else if(resp.status == 'failed' && !!resp.msg){
-                        var el = $('<div>')
-                            el.addClass("alert alert-danger err-msg").text(resp.msg)
-                            _this.prepend(el)
-                            el.show('slow')
-                            end_loader()
+                        var el = $('<div>');
+                            el.addClass("alert alert-danger err-msg").text(resp.msg);
+                            _this.prepend(el);
+                            el.show('slow');
+                            end_loader();
                     }else{
 						alert_toast("Ocorreu um erro",'error');
 						end_loader();
-                        console.log(resp)
+                        console.log(resp);
 					}
                     $('html,body').animate({scrollTop:0},'fast')
 				}
@@ -1233,18 +1237,4 @@ $('#receive-form').submit(function(e) {
     }
 });
 
-    $(function(){
-        if('<?php echo (isset($id) && $id > 0) || (isset($po_id) && $po_id > 0) ?>' == 1){
-            calc()
-            $('#supplier_id').attr('readonly','readonly')
-            $('#req_date').attr('readonly','readonly')
-            $('#req_unidade').attr('readonly','readonly')
-            $('#req_requisitante').attr('readonly','readonly')
-            $('#req_projeto').attr('readonly','readonly')
-            $('#req_setor_util').attr('readonly','readonly')
-            $('#req_proj_nome').attr('readonly','readonly')
-            $('#req_proj_cod').attr('readonly','readonly')
-            $('#remarks').attr('readonly','readonly')
-        }
-    })
 </script>

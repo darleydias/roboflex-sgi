@@ -218,15 +218,20 @@ font-size: small;
             
           <br>
           <?php if(!empty($remarks)) { ?>
-          <div class="row justify-content-around">
-          <div class="col" style="width:100%;">
-                <div class="form-group text-center">
-                <label for="remarks" class="control-label">Observações da Requisição</label>
-                <textarea name="remarks" id="remarks" rows="6" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? $remarks : '' ?></textarea>
-                </div>
-                </div>
-                </div>
-                <?php } ?>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
+<?php
+// Verificar a quantidade de linhas no texto anterior
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
+?>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
+</div>
+<?php } ?>
           <br>
                 <?php echo $etapa_mat_ou_ser == 1 ? "<h5 class='text-center'><a style='color:#f29f05'>MATERIAIS</a> SOLICITADOS</h5>" : "<h5 class='text-center'><a style='color:#035aa6'>SERVIÇOS</a> SOLICITADOS</h5>" ?>
               <br>
@@ -400,7 +405,7 @@ font-size: small;
 
         <td class="obs_item">
         <div class="content esconderTexto">
-        <div style="width:100%; min-width:250px;">
+        <div style="width:100%; min-width:250px; max-width:250px;">
         <?php echo $row['obs_item']; ?>
         </div>
         </div>
@@ -437,12 +442,12 @@ font-size: small;
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_1_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot2[]" value="<?php echo $row['cot2']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot2[]" value="<?php echo $row['cot2']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_1_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot3[]" value="<?php echo $row['cot3']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot3[]" value="<?php echo $row['cot3']; ?>">
                             </div>
                             
                             <!-- cotacao 2 -->
@@ -454,12 +459,12 @@ font-size: small;
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_2_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot5[]" value="<?php echo $row['cot5']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot5[]" value="<?php echo $row['cot5']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_2_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot6[]" value="<?php echo $row['cot6']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot6[]" value="<?php echo $row['cot6']; ?>">
                         </div>
 
                             <!-- cotacao 3 -->
@@ -471,12 +476,12 @@ font-size: small;
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_3_1" class="control-label">Valor Total</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot8[]" value="<?php echo $row['cot8']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot8[]" value="<?php echo $row['cot8']; ?>">
                             </div>
 
                             <div class="col-12 col-sm-4 col-md-4">
                             <label for="cotacao_3_2" class="control-label">Frete</label><br>
-                            <input type="number" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot9[]" value="<?php echo $row['cot9']; ?>">
+                            <input type="text" tabindex="-1" step="any" class="form-control select2 input-cotacao" name="cot9[]" value="<?php echo $row['cot9']; ?>">
                             </div>
 
                             </div><!-- fim hidden div -->
@@ -484,23 +489,24 @@ font-size: small;
                             <div class="row justify-content-around" style="min-width:400px;">
                             <?php if ($row['bot1']==='0'){ ?> <!-- cotacao 1 -->
                             
-                            <div>
+                            <div style="min-width: 150px;">
                             <strong>Fornecedor</strong><br>
                             <?php echo $row['cot1']?> <!-- resultado 1 -->
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>                            
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot2']?> <!-- resultado 1 -->
+                            echo number_format($row['cot2'], 2, ',', '.'); ?> <!-- resultado 1 -->
+
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot3']?> <!-- resultado 1 -->
+                            echo number_format($row['cot3'], 2, ',', '.'); ?> <!-- resultado 1 -->
                             </div>
 
                             <?php }
@@ -512,17 +518,17 @@ font-size: small;
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot5']?> <!-- resultado 2 -->
+                            echo number_format($row['cot5'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot6']?> <!-- resultado 2 -->
+                            echo number_format($row['cot6'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <?php } 
@@ -534,17 +540,17 @@ font-size: small;
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot8']?> <!-- resultado 3 -->
+                            echo number_format($row['cot8'], 2, ',', '.'); ?> <!-- resultado 3 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot9'];?> <!-- resultado 3 -->
+                            echo number_format($row['cot9'], 2, ',', '.'); ?> <!-- resultado 3 -->
                             </div>   
                             <?php }  
                             ?>
@@ -701,12 +707,12 @@ else{ ?>
 <div class="card-body">
 
 <?php 
-        $imageURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name1;
-        $imageURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name2;
-        $imageURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name3;
-        $imageURL4 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name4;
-        $imageURL5 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name5;
-        $pdfURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name6;
+        $imageURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name1;
+        $imageURL2 = base_url . '/admin/anexo/upload_requisicao/'.$file_name2;
+        $imageURL3 = base_url . '/admin/anexo/upload_requisicao/'.$file_name3;
+        $imageURL4 = base_url . '/admin/anexo/upload_requisicao/'.$file_name4;
+        $imageURL5 = base_url . '/admin/anexo/upload_requisicao/'.$file_name5;
+        $pdfURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name6;
         ?>
 
 <!-------------------------------------------------- FILE 6 -------------------------------------------->

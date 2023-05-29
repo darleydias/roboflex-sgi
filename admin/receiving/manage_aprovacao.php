@@ -234,15 +234,20 @@ body{
             
           <br>
           <?php if(!empty($remarks)) { ?>
-          <div class="row justify-content-around">
-          <div class="col" style="width:100%;">
-                <div class="form-group text-center">
-                <label for="remarks" class="control-label">Observações da Requisição</label>
-                <textarea name="remarks" id="remarks" rows="6" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? $remarks : '' ?></textarea>
-                </div>
-                </div>
-                </div>
-                <?php } ?>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
+<?php
+// Verificar a quantidade de linhas no texto anterior
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
+?>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
+</div>
+<?php } ?>
                 
                  <br>
                  <?php echo $etapa_mat_ou_ser == 1 ? "<h5 class='text-center'><a style='color:#f29f05'>MATERIAIS</a> SOLICITADOS</h5>" : "<h5 class='text-center'><a style='color:#035aa6'>SERVIÇOS</a> SOLICITADOS</h5>" ?>
@@ -388,9 +393,9 @@ body{
                             </div>
                             </td>
 
-        <td class="obs_item">
+        <td class="obs_item" style="min-width:250px; max-width:250px;">
         <div class="content esconderTexto">
-        <div style="width:100%; min-width:250px;">
+        <div style="width:100%;">
         <?php echo $row['obs_item']; ?>
         </div>
         </div>
@@ -401,7 +406,7 @@ body{
         <?php } ?>
         </td>
 
-                            <td class="obs_item" style="min-width:200px;">
+                            <td class="fornecedor_item" style="min-width:200px;">
                             <?php echo $row['fornecedor_item']; ?>
                             </td>
 
@@ -781,7 +786,7 @@ $('input:checkbox').change(function () {
                         <div class="col-12 col-sm-12 col-md-6 text-center">
                         <div class="form-group">
                             <label for="obs_aprovacao" class="control-label">Observação</label>
-                            <textarea name="obs_aprovacao" tabindex="-1" id="obs_aprovacao" style="width:100%;" rows="3" class="text-center"><?php echo isset($obs_aprovacao) ? $obs_aprovacao : '' ?></textarea>
+                            <textarea name="obs_aprovacao" tabindex="-1" id="obs_aprovacao" style="width:100%;" class="text-center" onload="autoResizeTextarea(this)" oninput="autoResizeTextarea(this)"><?php echo isset($obs_aprovacao) ? $obs_aprovacao : '' ?></textarea>
                         </div>
                     </div>
 
@@ -862,12 +867,12 @@ else{ ?>
 <div class="card-body">
 
 <?php 
-        $imageURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name1;
-        $imageURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name2;
-        $imageURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name3;
-        $imageURL4 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name4;
-        $imageURL5 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name5;
-        $pdfURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name6;
+        $imageURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name1;
+        $imageURL2 = base_url . '/admin/anexo/upload_requisicao/'.$file_name2;
+        $imageURL3 = base_url . '/admin/anexo/upload_requisicao/'.$file_name3;
+        $imageURL4 = base_url . '/admin/anexo/upload_requisicao/'.$file_name4;
+        $imageURL5 = base_url . '/admin/anexo/upload_requisicao/'.$file_name5;
+        $pdfURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name6;
         ?>
 
 <!-------------------------------------------------- FILE 6 -------------------------------------------->
@@ -1059,20 +1064,6 @@ fixedColumns:   {
     var _this = $(this)
     $('.err-msg').remove();
 
-    $('.mkt').each(function() {
-    var input = $(this);
-    var name = input.attr('name');
-    var value = input.val();
-
-    // Remover todas as vírgulas e pontos, e só deixar o último ponto (decimal)
-    var newValue = value.replace(/(?<=\d)[,.]|[,.](?=\d)/g, function(match) {
-      return match === ',' ? '.' : '';
-    });
-
-    // Definir o novo valor no input
-    input.val(newValue);
-  });
-  
     // checar se pelo menos 1 checkbox esta marcado por linha
     var checkboxes = _this.find('input[type="checkbox"]');
     var rows = {};
@@ -1101,6 +1092,20 @@ fixedColumns:   {
         return;
     }
 
+    $('.mkt').each(function() {
+    var input = $(this);
+    var name = input.attr('name');
+    var value = input.val();
+
+    // Remover todas as vírgulas e pontos, e só deixar o último ponto (decimal)
+    var newValue = value.replace(/(?<=\d)[,.]|[,.](?=\d)/g, function(match) {
+      return match === ',' ? '.' : '';
+    });
+
+    // Definir o novo valor no input
+    input.val(newValue);
+  });
+  
 			start_loader();
 			$.ajax({
 				url:_base_url_+"classes/Master.php?f=save_receiving",
@@ -1134,52 +1139,5 @@ fixedColumns:   {
 				}
 			})
 		})
-
-        if('<?php echo (isset($id) && $id > 0) || (isset($po_id) && $po_id > 0) ?>' == 1){
-            calc()
-            $('#supplier_id').attr('readonly','readonly')
-            $('#req_date').attr('readonly','readonly')
-            $('#req_unidade').attr('readonly','readonly')
-            $('#req_requisitante').attr('readonly','readonly')
-            $('#req_projeto').attr('readonly','readonly')
-            $('#req_setor_util').attr('readonly','readonly')
-            $('#req_proj_nome').attr('readonly','readonly')
-            $('#req_proj_cod').attr('readonly','readonly')
-            $('#remarks').attr('readonly','readonly')
-
-            $('table#list tbody tr .rem_row').click(function(){
-                rem($(this))
-            })
-                console.log('test')
-            $('[name="qty[]"],[name="discount_perc"],[name="tax_perc"]').on('input',function(){
-                calc()
-            })
-        }
     })
-    
-    function rem(_this){
-        _this.closest('tr').remove()
-        calc()
-        if($('table#list tbody tr').length <= 0)
-            $('#supplier_id').removeAttr('readonly')
-    }
-    function calc(){
-        var sub_total = 0;
-        var grand_total = 0;
-        var discount = 0;
-        var tax = 0;
-        $('table#list tbody tr').each(function(){
-            qty = $(this).find('[name="qty[]"]').val()
-            cot1 = $(this).find('[name="cot1[]"]').val()
-            cot2 = $(this).find('[name="cot2[]"]').val()
-            cot3 = $(this).find('[name="cot3[]"]').val()
-            cot4 = $(this).find('[name="cot4[]"]').val()
-            cot5 = $(this).find('[name="cot5[]"]').val()
-            cot6 = $(this).find('[name="cot6[]"]').val()
-            cot7 = $(this).find('[name="cot7[]"]').val()
-            cot8 = $(this).find('[name="cot8[]"]').val()
-            cot9 = $(this).find('[name="cot9[]"]').val()
-            bot1 = $(this).find('[name="bot1[]"]').val()
-        })     
-    } 
 </script>

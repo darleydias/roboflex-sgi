@@ -176,31 +176,27 @@ zoom: 90%;
                 </div> <!-- fim linha -->
             
           <br>
-
-<?php if(!empty($remarks)) { ?>          
+          <?php if(!empty($remarks)) { ?>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
 <?php
 // Verificar a quantidade de linhas no texto anterior
-$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 10;
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
 ?>
-
-<div class="row justify-content-around">
-  <div class="col" style="width:100%;">
-    <div class="form-group text-center">
-      <label for="remarks" class="control-label">Observações da requisição</label>
-      <textarea name="remarks" id="remarks" rows="<?php echo $lineCount; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
-    </div>
-  </div>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
 </div>
 <?php } ?>
-
                <!-- INICIO TABELA --> 
                <br>
-
-               
                <?php echo $etapa_mat_ou_ser == 1 ? "<h5 class='text-center'><a style='color:#f29f05'>MATERIAIS</a> SOLICITADOS</h5>" : "<h5 class='text-center'><a style='color:#035aa6'>SERVIÇOS</a> SOLICITADOS</h5>" ?>
 <br>
                 <table class="table table-striped table-bordered tabela-form-r" style="width:100%;" id="list_visu" >
-            <colgroup>
+                <colgroup>
             <col width="7%">
             <col width="13%">
             <col width="5%">
@@ -427,63 +423,63 @@ $lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 10;
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot2']?> <!-- resultado 1 -->
+                            echo number_format($row['cot2'], 2, ',', '.'); ?> <!-- resultado 1 -->
+
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot3']?> <!-- resultado 1 -->
+                            echo number_format($row['cot3'], 2, ',', '.'); ?> <!-- resultado 1 -->
                             </div>
 
                             <?php }
                              elseif ($row['bot1']==='1'){ ?> <!-- cotacao 2 -->
-                            
-                            <div>
+
+                            <div class="text-center">
                             <strong>Fornecedor</strong><br>
                             <?php echo $row['cot4']?> <!-- resultado 2 -->
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot5']?> <!-- resultado 2 -->
+                            echo number_format($row['cot5'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot6']?> <!-- resultado 2 -->
+                            echo number_format($row['cot6'], 2, ',', '.'); ?> <!-- resultado 2 -->
                             </div>
 
                             <?php } 
                              elseif ($row['bot1']==='2'){ ?> <!-- cotacao 3 -->
                             
-                            <div>
+                            <div class="text-center">
                             <strong>Fornecedor</strong><br>
                             <?php echo $row['cot7']?> <!-- resultado 3 -->
                             </div>
 
                             <div>
-                            <strong>Valor Total</strong><br>
+                            <strong>Valor total</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot8']?> <!-- resultado 3 -->
+                            echo number_format($row['cot8'], 2, ',', '.'); ?> <!-- resultado 3 -->
                             </div>
 
                             <div>
                             <strong>Frete</strong><br>
                             <?php
                             echo 'R$ ';
-                            echo $row['cot9']?> <!-- resultado 3 -->
-                            </div>
-                             
+                            echo number_format($row['cot9'], 2, ',', '.'); ?> <!-- resultado 3 -->
+                            </div>   
                             <?php }  
                             ?>
                             </div>
@@ -534,19 +530,19 @@ $lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 10;
                 
                 <.?php endif; ?> -->
     
-                <?php if(!empty($obs_cotacao)) { ?>          
+                <?php if(!empty($obs_cotacao)) { ?>
+<div class="row justify-content-around">
+<div class="col" style="width:100%;">
+<div class="form-group text-center">
+<label for="obs_cotacao" class="control-label">Observações da cotação</label>
 <?php
 // Verificar a quantidade de linhas no texto anterior
-$lineCount = isset($obs_cotacao) ? substr_count($obs_cotacao, "\n") + 1 : 10;
+$lineCount = isset($obs_cotacao) ? substr_count($obs_cotacao, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
 ?>
-
-<div class="row justify-content-around">
-  <div class="col" style="width:100%;">
-    <div class="form-group text-center">
-      <label for="obs_cotacao" class="control-label">Observação cotação</label>
-      <textarea name="obs_cotacao" id="obs_cotacao" rows="<?php echo $lineCount; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($obs_cotacao) ? htmlspecialchars($obs_cotacao) : ''; ?></textarea>
-    </div>
-  </div>
+<textarea name="obs_cotacao" id="obs_cotacao" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($obs_cotacao) ? htmlspecialchars($obs_cotacao) : ''; ?></textarea>
+</div>
+</div>
 </div>
 <?php } ?>
            
@@ -735,14 +731,15 @@ else{ ?>
     <h4 class="card-title"><strong>ANEXOS</strong></h4>
     </div>
 <div class="card-body">
+    
 <?php 
-        $imageURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name1;
-        $imageURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name2;
-        $imageURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name3;
-        $imageURL4 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name4;
-        $imageURL5 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name5;
-        $pdfURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name6;
-        ?>
+        $imageURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name1;
+        $imageURL2 = base_url . '/admin/anexo/upload_requisicao/'.$file_name2;
+        $imageURL3 = base_url . '/admin/anexo/upload_requisicao/'.$file_name3;
+        $imageURL4 = base_url . '/admin/anexo/upload_requisicao/'.$file_name4;
+        $imageURL5 = base_url . '/admin/anexo/upload_requisicao/'.$file_name5;
+        $pdfURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name6;
+?>
 
 <!-------------------------------------------------- FILE 6 -------------------------------------------->
 <div class="row d-flex flex-column text-center">
@@ -899,15 +896,17 @@ else{ ?>
             var p = $('#print_out').clone()
             p.find('tr.text-light').removeClass("text-light bg-navy")
             _el.append(_head)
-            _el.append('<div class="d-flex justify-content-center" style="width:100%;">'+
-                      '<div class="form-group col-1">'+
+            _el.append('<div class="d-flex justify-content-center">'+
+                      '<div class="col-1 text-right">'+
                       '<img src="<?php echo validate_image($_settings->info('logo')) ?>" width="165px" height="65px" />'+
                       '</div>'+
-                      '<div class="form-group col-10">'+
+                      '<div class="col-10">'+
                       '<h4 class="text-center"><?php echo $_settings->info('name') ?></h4>'+
+                      '<h4 class="text-center">Entrada</h4>'+
                       '</div>'+
+                      '<div class="col-1 text-right">'+
                       '</div>'+
-                      '<br>'
+                      '</div><hr/>'
                       )
             _el.append(p.html())
             var nw = window.open("","","width=1200,height=900,left=250,location=no,titlebar=yes")

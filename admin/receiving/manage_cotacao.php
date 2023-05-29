@@ -222,15 +222,20 @@ border-color: gray;
             
           <br>
           <?php if(!empty($remarks)) { ?>
-          <div class="row justify-content-around">
-          <div class="col" style="width:100%;">
-                <div class="form-group text-center">
-                <label for="remarks" class="control-label">Observações da Requisição</label>
-                <textarea name="remarks" id="remarks" rows="6" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? $remarks : '' ?></textarea>
-                </div>
-                </div>
-                </div>
-                <?php } ?>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
+<?php
+// Verificar a quantidade de linhas no texto anterior
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
+?>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
+</div>
+<?php } ?>
       
                 <?php echo $etapa_mat_ou_ser == 1 ? "<h5 class='text-center'><a style='color:#f29f05'>MATERIAIS</a> SOLICITADOS</h5>" : "<h5 class='text-center'><a style='color:#035aa6'>SERVIÇOS</a> SOLICITADOS</h5>" ?>
 
@@ -485,10 +490,10 @@ border-color: gray;
                 </div>             
 <br>
         <div class="row justify-content-around">
-        <div class="text-center col-md-10">
+        <div class="col-md-10 text-center">
             <div class="form-group">
-                <label for="obs_cotacao" class="control-label">Observações da Cotação</label>
-                <textarea name="obs_cotacao" id="obs_cotacao" class="form-control rounded-0 text-center" onload="autoResizeTextarea(this)" oninput="autoResizeTextarea(this)"><?php echo isset($obs_cotacao) ? $obs_cotacao : '' ?></textarea>
+                <label for="obs_cotacao" class="control-label">Observações da cotação</label>
+                <textarea name="obs_cotacao" id="obs_cotacao" class="text-center form-control rounded-0" onload="autoResizeTextarea(this)" oninput="autoResizeTextarea(this)"><?php echo isset($obs_cotacao) ? $obs_cotacao : '' ?></textarea>
             </div>
         </div>
     </div>
@@ -600,12 +605,12 @@ else{ ?>
     </div>
 <div class="card-body">
 <?php 
-        $imageURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name1;
-        $imageURL2 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name2;
-        $imageURL3 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name3;
-        $imageURL4 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name4;
-        $imageURL5 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name5;
-        $pdfURL1 = 'http://192.168.0.5/sistema/admin/anexo/upload_requisicao/'.$file_name6;
+        $imageURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name1;
+        $imageURL2 = base_url . '/admin/anexo/upload_requisicao/'.$file_name2;
+        $imageURL3 = base_url . '/admin/anexo/upload_requisicao/'.$file_name3;
+        $imageURL4 = base_url . '/admin/anexo/upload_requisicao/'.$file_name4;
+        $imageURL5 = base_url . '/admin/anexo/upload_requisicao/'.$file_name5;
+        $pdfURL1 = base_url . '/admin/anexo/upload_requisicao/'.$file_name6;
         ?>
 
 <!-------------------------------------------------- FILE 6 -------------------------------------------->
@@ -833,53 +838,14 @@ $('a.toggle-vis').on('click', function (e) {
 
 });
 
-   /*      $('#list_cotacao').removeAttr('width').DataTable( {
-		"scrollX": true,
-        paging:false,
-        "lengthChange": false,
-        scrollCollapse: true,
-        "searching": false,
-        "bInfo" : false,
-        "ordering": false,
-        fixedColumns:   {
-            left: 3,
-        },
-        columnDefs: [
-            { width: 70, targets: 0 }, 
-            { width: 200, targets: 1 }, 
-             { width: 70, targets: 2 }, 
-            {<,?php if ($etapa_mat_ou_ser == 0) : ?>},
-            { width: 70, visible: false,  targets: 3 }, 
-            {<,?php elseif ($etapa_mat_ou_ser == 1) : ?>},
-            { width: 70, targets: 3 }, 
-            {<.?php endif; ?>},
-            { width: 300, targets: 4 }, 
-            { width: 200, targets: 5 }, 
-            { width: 100, targets: 6 }, 
-            { width: 400, targets: 7 }, 
-            { width: 400, targets: 8 }, 
-            { width: 400, targets: 9 }, 
-           
-             { width: 70, targets: 8 }, 
-            { width: 70, targets: 9 }, 
-        ],
-        language : {
-        "zeroRecords": " "            
-    },
-}) */
-  
 
     $(function(){
 
-        /* $('.select2').select2({
-            placeholder:"Escolha aqui",
-            width:'resolve',
-        }) */
         $('#receive-form').submit(function(e){
 			e.preventDefault();
             var _this = $(this)
 			 $('.err-msg').remove();
-			start_loader();
+
 
     $('.mkt').each(function() {
     var input = $(this);
@@ -895,6 +861,7 @@ $('a.toggle-vis').on('click', function (e) {
     input.val(newValue);
   });
 
+			start_loader();
 			$.ajax({
 				url:_base_url_+"classes/Master.php?f=save_receiving",
 				data: new FormData($(this)[0]),

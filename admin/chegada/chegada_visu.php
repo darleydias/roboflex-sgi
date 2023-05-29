@@ -163,15 +163,20 @@ label {
             
           <br>
           <?php if(!empty($remarks)) { ?>
-          <div class="row justify-content-around">
-                    <div class="col-12 col-sm-12 col-md-12 text-center">
-                        <div class="form-group">
-                            <label for="remarks" class="control-label">Observações da Requisição</label>
-                            <p style="width: 100%;"><?php echo isset($remarks) ? $remarks : '' ?></p>
-                        </div>
-                    </div>
-                </div>
-                <?php } ?>
+<div class="row justify-content-around">
+<div class="col-md-10">
+<div class="form-group text-center">
+<label for="remarks" class="control-label">Observações da requisição</label>
+<?php
+// Verificar a quantidade de linhas no texto anterior
+$lineCount = isset($remarks) ? substr_count($remarks, "\n") + 1 : 1;
+$rows = ($lineCount > 1) ? $lineCount : 3; // Definir pelo menos 2 linhas visíveis
+?>
+<textarea name="remarks" id="remarks" rows="<?php echo $rows; ?>" class="form-control rounded-0 text-center" readonly><?php echo isset($remarks) ? htmlspecialchars($remarks) : ''; ?></textarea>
+</div>
+</div>
+</div>
+<?php } ?>
 
                <!-- INICIO TABELA --> 
 

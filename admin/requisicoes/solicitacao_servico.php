@@ -335,9 +335,9 @@ endwhile; ?>
 <br>
 
     <div class="row justify-content-around">
-        <div class="col text-center" style="width: 100%;">
+        <div class="col-md-10 text-center">
             <div class="form-group">
-                <label for="remarks" class="control-label">Observações da Requisição</label>
+                <label for="remarks" class="control-label">Observações da requisição</label>
                 <textarea name="remarks" id="remarks" class="form-control rounded-0 text-center" onload="autoResizeTextarea(this)" oninput="autoResizeTextarea(this)"><?php echo isset($remarks) ? $remarks : '' ?></textarea>
             </div>
         </div>
@@ -519,12 +519,6 @@ SOLICITAÇÃO
 
 
 <script>
-
-function autoResizeTextarea(textarea) {
-  textarea.style.height = 'auto';
-  textarea.style.height = (textarea.scrollHeight) + 'px';
-}
-
     /* ADICIONAR ITEM NA TELA DE SOLICITAÇÃO */
     $(document).ready(function() {
 
