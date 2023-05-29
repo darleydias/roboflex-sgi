@@ -1,0 +1,981 @@
+%PDF-1.3
+%Ã¢Ã£ÃÃ“
+
+1 0 obj
+<<
+/Type /Catalog
+/Outlines 2 0 R
+/Pages 3 0 R
+>>
+endobj
+
+2 0 obj
+<<
+/Type /Outlines
+/Count 0
+>>
+endobj
+
+3 0 obj
+<<
+/Type /Pages
+/Count 1
+/Kids [ 4 0 R ] 
+>>
+endobj
+
+4 0 obj
+<<
+/Type /Page
+/Parent 3 0 R
+/Resources <<
+/Font <<
+/F1 7 0 R 
+/F2 8 0 R 
+>>
+/XObject <<
+/G1 9 0 R
+>>
+/ProcSet 6 0 R
+>>
+/MediaBox [0 0 595 842]
+/Contents 5 0 R
+>>
+endobj
+
+5 0 obj
+<< /Length 10600 >>
+stream
+2 J
+q
+97.2000 0 0 32.4000 17.2800 792.2400 cm
+/G1 Do
+Q
+BT
+0 0 0 rg
+/F1 7.92 Tf
+120.2141 816.0960 Td
+(EMPRESA:)Tj
+ET
+BT
+/F1 7.92 Tf
+359.2800 816.0960 Td
+(CNPJ:)Tj
+ET
+BT
+/F1 7.92 Tf
+254.8800 804.5760 Td
+(ENDEREÇO:)Tj
+ET
+BT
+/F2 7.92 Tf
+164.1600 816.0960 Td
+(UNIVERSO ELETRICO LTDA - FILIAL 2)Tj
+ET
+BT
+/F2 7.92 Tf
+385.2000 816.0960 Td
+(02697297000383)Tj
+ET
+BT
+/F2 7.92 Tf
+164.1600 804.5760 Td
+(0629871370287)Tj
+ET
+BT
+/F2 7.92 Tf
+308.1600 803.8560 Td
+(RUA RODRIGUES DO PRADO, 100)Tj
+ET
+BT
+/F1 7.92 Tf
+473.2488 816.0960 Td
+(Página:)Tj
+ET
+BT
+/F2 7.92 Tf
+527.7600 816.0960 Td
+(1)Tj
+ET
+BT
+/F2 7.92 Tf
+552.9182 816.0960 Td
+(/)Tj
+ET
+BT
+/F2 7.92 Tf
+572.3165 816.0960 Td
+(1)Tj
+ET
+BT
+/F1 7.92 Tf
+482.0241 803.8560 Td
+(Data:)Tj
+ET
+BT
+/F2 7.92 Tf
+503.9683 803.8560 Td
+(27/03/2023)Tj
+ET
+BT
+/F2 7.92 Tf
+545.8954 803.8560 Td
+(13:23:09)Tj
+ET
+BT
+/F1 7.92 Tf
+149.6765 804.5760 Td
+(I.E:)Tj
+ET
+BT
+/F1 7.92 Tf
+254.8800 792.3360 Td
+(CIDADE:)Tj
+ET
+BT
+/F2 7.92 Tf
+290.8800 792.3360 Td
+(BELO HORIZONTE)Tj
+ET
+BT
+/F1 7.92 Tf
+384.2453 792.3360 Td
+(UF:)Tj
+ET
+BT
+/F2 7.92 Tf
+400.3200 792.3360 Td
+(MG)Tj
+ET
+BT
+/F1 7.92 Tf
+428.9270 792.3360 Td
+(CEP:)Tj
+ET
+BT
+/F2 7.92 Tf
+450.0000 792.3360 Td
+(31250310)Tj
+ET
+BT
+/F2 7.92 Tf
+524.7490 792.3360 Td
+(\(31\)3071-3232)Tj
+ET
+BT
+/F1 7.92 Tf
+128.1182 792.3360 Td
+(BAIRRO:)Tj
+ET
+BT
+/F2 7.92 Tf
+164.1600 792.3360 Td
+(ERMELINDA)Tj
+ET
+BT
+/F1 7.92 Tf
+494.4888 792.3360 Td
+(FONE:)Tj
+ET
+[] 0 d
+0 0 0 RG
+1 1 1 rg
+0.2400 w 
+14.4000 827.5200 m
+578.1600 827.5200 l S
+14.4000 788.6400 m
+578.1600 788.6400 l S
+BT
+0 0 0 rg
+/F1 7.92 Tf
+464.4000 737.6160 Td
+(CNPJ:)Tj
+ET
+BT
+/F2 7.92 Tf
+490.3200 737.6160 Td
+(16.875.130/0001-08)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+14.4000 624.4800 m
+578.1600 624.4800 l S
+BT
+0 0 0 rg
+/F1 6.96 Tf
+16.5298 615.4080 Td
+(ITEM)Tj
+ET
+BT
+/F1 6.96 Tf
+41.6102 615.4080 Td
+(CODIGO)Tj
+ET
+BT
+/F1 6.96 Tf
+106.8590 615.4080 Td
+(DESCRIÇÃO DO PRODUTO)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+14.4000 612.2400 m
+578.1600 612.2400 l S
+36.0000 623.7600 m
+36.0000 612.2400 l S
+73.4400 623.7600 m
+73.4400 612.2400 l S
+14.4000 623.7600 m
+14.4000 612.2400 l S
+BT
+0 0 0 rg
+/F1 6.96 Tf
+340.9349 615.4080 Td
+(UN)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+288.7200 623.7600 m
+288.7200 612.2400 l S
+BT
+0 0 0 rg
+/F1 6.96 Tf
+370.6042 615.4080 Td
+(REF.FAB.)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+415.4400 623.7600 m
+415.4400 612.2400 l S
+BT
+0 0 0 rg
+/F1 6.96 Tf
+482.9698 615.4080 Td
+(QT)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+468.7200 623.7600 m
+468.7200 612.2400 l S
+578.1600 623.7600 m
+578.1600 612.2400 l S
+BT
+0 0 0 rg
+/F1 7.92 Tf
+35.4859 737.6160 Td
+(CLIENTE Nº:)Tj
+ET
+BT
+/F2 7.92 Tf
+102.4589 737.6160 Td
+(106960)Tj
+ET
+BT
+/F2 7.92 Tf
+140.4000 737.6160 Td
+(MATRIXX DESENVOLVIMENTO DE PECAS TECNICAS LTDA)Tj
+ET
+BT
+/F1 7.92 Tf
+132.5974 737.6160 Td
+(-)Tj
+ET
+BT
+/F2 7.92 Tf
+134.0554 668.4960 Td
+(1492636)Tj
+ET
+BT
+/F1 7.92 Tf
+217.4558 725.3760 Td
+(ENDEREÇO:)Tj
+ET
+BT
+/F2 7.92 Tf
+267.8400 725.3760 Td
+(R CONCEICAO DO PARA,150)Tj
+ET
+BT
+/F1 7.92 Tf
+231.9653 713.8560 Td
+(CIDADE:)Tj
+ET
+BT
+/F2 7.92 Tf
+267.8400 713.8560 Td
+(BELO HORIZONTE)Tj
+ET
+BT
+/F1 7.92 Tf
+37.9570 700.8960 Td
+(TELEFONE:)Tj
+ET
+BT
+/F2 7.92 Tf
+84.9600 700.8960 Td
+(31 3054-4970)Tj
+ET
+BT
+/F1 7.92 Tf
+178.7746 700.8960 Td
+(CONTATO/TELEFONE:)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+14.4000 827.5200 m
+14.4000 623.7600 l S
+578.1600 827.5200 m
+578.1600 623.7600 l S
+BT
+0 0 0 rg
+/F1 7.92 Tf
+22.7189 668.4960 Td
+(Nº ORÇ. FILIAL:)Tj
+ET
+BT
+/F1 7.92 Tf
+67.6800 725.3760 Td
+(I.E:)Tj
+ET
+BT
+/F2 7.92 Tf
+84.9600 725.3760 Td
+(0629017890036)Tj
+ET
+BT
+/F1 7.92 Tf
+463.5288 668.4960 Td
+(DATA:)Tj
+ET
+BT
+/F2 7.92 Tf
+504.0619 668.4960 Td
+(27/03/2023 13:22:17)Tj
+ET
+BT
+/F2 7.92 Tf
+84.9600 713.8560 Td
+(SANTA INES)Tj
+ET
+BT
+/F1 7.92 Tf
+217.4558 646.8960 Td
+(VENDEDOR:)Tj
+ET
+BT
+/F2 7.92 Tf
+303.8400 646.8960 Td
+(PEDRO HENRIQUE)Tj
+ET
+BT
+/F2 7.92 Tf
+562.3200 713.8560 Td
+(MG)Tj
+ET
+BT
+/F1 7.92 Tf
+558.1174 713.8560 Td
+(-)Tj
+ET
+BT
+/F1 7.92 Tf
+201.7901 668.4960 Td
+(Nº ORÇ. GERAL:)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+334.8000 623.7600 m
+334.8000 612.2400 l S
+BT
+0 0 0 rg
+/F1 6.96 Tf
+304.9125 615.4080 Td
+(NCM)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+357.1200 623.7600 m
+357.1200 612.2400 l S
+BT
+0 0 0 rg
+/F1 6.96 Tf
+430.2075 615.4080 Td
+(MARCA)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+505.4400 623.7600 m
+505.4400 612.2400 l S
+BT
+0 0 0 rg
+/F1 6.96 Tf
+510.2395 615.4080 Td
+(P.UNIT)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+540.0000 623.7600 m
+540.0000 612.2400 l S
+BT
+0 0 0 rg
+/F1 11.04 Tf
+221.3895 750.6720 Td
+(INFORMAÇÕES DO CLIENTE)Tj
+ET
+BT
+/F1 6.96 Tf
+543.1637 615.4080 Td
+(VL.TOTAL)Tj
+ET
+BT
+/F1 7.92 Tf
+48.9182 713.8560 Td
+(BAIRRO:)Tj
+ET
+BT
+/F1 11.04 Tf
+208.8039 682.9920 Td
+(INFORMAÇÕES DO ORÇAMENTO)Tj
+ET
+BT
+/F1 7.92 Tf
+49.8053 656.9760 Td
+(PEDIDO:)Tj
+ET
+BT
+/F1 7.92 Tf
+216.1253 656.9760 Td
+(COBRANÇA:)Tj
+ET
+BT
+/F2 7.92 Tf
+267.8400 656.9760 Td
+(BK)Tj
+ET
+BT
+/F1 7.92 Tf
+326.1499 656.9760 Td
+(PLANO DE PAGAMENTO:)Tj
+ET
+BT
+/F2 7.92 Tf
+426.2400 656.9760 Td
+(28 DIAS)Tj
+ET
+BT
+/F1 7.92 Tf
+25.6334 646.8960 Td
+(TRANSPORTE:)Tj
+ET
+BT
+/F2 7.92 Tf
+84.9600 646.8960 Td
+(FOB - Por conta do destinatário)Tj
+ET
+BT
+/F1 11.04 Tf
+232.5129 628.9920 Td
+(ITENS DO ORÇAMENTO)Tj
+ET
+BT
+/F1 13.92 Tf
+169.2341 771.6960 Td
+(ORÇAMENTO Nº: 1.492.636 [FILIAL: 2])Tj
+ET
+0 0 0 RG
+1 1 1 rg
+14.4000 764.1600 m
+578.1600 764.1600 l S
+14.4000 747.6000 m
+578.1600 747.6000 l S
+14.4000 696.4800 m
+578.1600 696.4800 l S
+14.4000 679.9200 m
+578.1600 679.9200 l S
+14.4000 642.4800 m
+578.1600 642.4800 l S
+BT
+0 0 0 rg
+/F2 7.92 Tf
+281.9894 646.8960 Td
+(259)Tj
+ET
+BT
+/F1 7.92 Tf
+298.1973 646.8960 Td
+(-)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+229.6800 623.7600 m
+229.6800 612.2400 l S
+BT
+0 0 0 rg
+/F1 6.96 Tf
+233.3018 615.4080 Td
+(OBS PRODUTO)Tj
+ET
+BT
+/F2 6.96 Tf
+22.9051 603.8880 Td
+(1)Tj
+ET
+BT
+/F2 6.96 Tf
+51.9312 603.8880 Td
+(10529)Tj
+ET
+BT
+/F2 6.96 Tf
+75.6000 603.8880 Td
+(TERMINAL)Tj
+ET
+BT
+/F2 6.96 Tf
+113.1605 603.8880 Td
+( PINO)Tj
+ET
+BT
+/F2 6.96 Tf
+134.4902 603.8880 Td
+( COMPRESSAO)Tj
+ET
+BT
+/F2 6.96 Tf
+188.6712 603.8880 Td
+( TCM-C)Tj
+ET
+BT
+/F2 6.96 Tf
+215.4158 603.8880 Td
+( 120)Tj
+ET
+BT
+/F2 6.96 Tf
+75.6000 595.5360 Td
+(MM)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+36.0000 613.7417 m
+36.0000 591.2723 l S
+14.4000 613.7417 m
+14.4000 591.2723 l S
+73.4400 613.7417 m
+73.4400 591.2723 l S
+BT
+0 0 0 rg
+/F2 6.96 Tf
+341.1297 603.8880 Td
+(PC)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+288.7200 613.7417 m
+288.7200 591.2723 l S
+BT
+0 0 0 rg
+/F2 6.96 Tf
+360.7200 603.8880 Td
+(TB120-30)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+415.4400 613.7417 m
+415.4400 591.2723 l S
+468.7200 613.7417 m
+468.7200 591.2723 l S
+578.1600 613.7417 m
+578.1600 591.2723 l S
+14.4000 591.2723 m
+578.1600 591.2723 l S
+334.8000 613.7417 m
+334.8000 591.2723 l S
+BT
+0 0 0 rg
+/F2 6.96 Tf
+297.3609 603.8880 Td
+(85359090)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+357.1200 613.7417 m
+357.1200 591.2723 l S
+BT
+0 0 0 rg
+/F2 6.96 Tf
+418.3200 603.8880 Td
+(DIVERSOS)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+505.4400 613.7417 m
+505.4400 591.2723 l S
+540.0000 613.7417 m
+540.0000 591.2723 l S
+BT
+0 0 0 rg
+/F2 6.96 Tf
+499.4102 603.8880 Td
+(3)Tj
+ET
+BT
+/F2 6.96 Tf
+519.7061 603.8880 Td
+(30,00)Tj
+ET
+BT
+/F2 6.96 Tf
+559.3061 603.8880 Td
+(90,00)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+229.6800 613.7417 m
+229.6800 591.2723 l S
+BT
+0 0 0 rg
+/F1 10.08 Tf
+15.1200 454.8000 Td
+(Observações:)Tj
+ET
+BT
+/F1 10.08 Tf
+274.8557 341.7600 Td
+(Vendedor)Tj
+ET
+BT
+/F1 7.92 Tf
+262.0123 329.2320 Td
+(PEDRO HENRIQUE)Tj
+ET
+BT
+/F1 7.92 Tf
+220.5194 316.9920 Td
+(pedro.henrique@universoeletrico.com.br)Tj
+ET
+BT
+/F1 7.92 Tf
+271.4371 306.1920 Td
+(31 99984-3957)Tj
+ET
+BT
+/F1 10.08 Tf
+45.7690 579.3600 Td
+(Total)Tj
+ET
+BT
+/F1 10.08 Tf
+280.2355 579.3600 Td
+(1)Tj
+ET
+BT
+/F1 10.08 Tf
+551.4999 579.3600 Td
+(90,00)Tj
+ET
+BT
+/F1 10.08 Tf
+292.3200 579.3600 Td
+(Itens)Tj
+ET
+BT
+/F1 10.08 Tf
+473.8176 564.9600 Td
+(Frete:)Tj
+ET
+BT
+/F1 10.08 Tf
+403.2777 549.8400 Td
+(Total do Orçamento:)Tj
+ET
+BT
+/F1 10.08 Tf
+452.5891 579.3600 Td
+(Sub Total:)Tj
+ET
+BT
+/F1 10.08 Tf
+15.1200 282.0000 Td
+(VALIDADE - ORÇAMENTO SUJEITO AO ESTOQUE E PREÇO DO DIA.)Tj
+ET
+BT
+/F1 7.92 Tf
+15.1200 257.9520 Td
+(ESPECIAIS.)Tj
+ET
+BT
+/F1 7.92 Tf
+15.1200 269.4720 Td
+(NÃO)Tj
+ET
+BT
+/F1 7.92 Tf
+34.6630 269.4720 Td
+( ACEITAMOS)Tj
+ET
+BT
+/F1 7.92 Tf
+86.3136 269.4720 Td
+( DEVOLUÇÃO)Tj
+ET
+BT
+/F1 7.92 Tf
+141.0372 269.4720 Td
+( DE)Tj
+ET
+BT
+/F1 7.92 Tf
+156.1766 269.4720 Td
+( RETALHOS)Tj
+ET
+BT
+/F1 7.92 Tf
+203.8514 269.4720 Td
+( DE)Tj
+ET
+BT
+/F1 7.92 Tf
+218.9909 269.4720 Td
+( FIOS,)Tj
+ET
+BT
+/F1 7.92 Tf
+243.8086 269.4720 Td
+( CABOS,)Tj
+ET
+BT
+/F1 7.92 Tf
+278.7480 269.4720 Td
+( MANGUEIRAS,)Tj
+ET
+BT
+/F1 7.92 Tf
+339.2057 269.4720 Td
+( MERCADORIAS)Tj
+ET
+BT
+/F1 7.92 Tf
+403.1798 269.4720 Td
+( VENDIDAS)Tj
+ET
+BT
+/F1 7.92 Tf
+448.2252 269.4720 Td
+( SOB)Tj
+ET
+BT
+/F1 7.92 Tf
+469.5264 269.4720 Td
+( MEDIDA)Tj
+ET
+BT
+/F1 7.92 Tf
+504.9094 269.4720 Td
+( OU)Tj
+ET
+BT
+/F1 7.92 Tf
+520.9358 269.4720 Td
+( ENCOMENDAS)Tj
+ET
+BT
+/F1 9.12 Tf
+169.5317 243.3120 Td
+(PREÇOS VÁLIDOS SOMENTE PARA ESSE ORÇAMENTO.)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+1.0201 w 
+169.5317 241.7819 m
+418.7083 241.7819 l S
+BT
+0 0 0 rg
+/F1 10.08 Tf
+15.1200 531.8400 Td
+(Local de entrega:)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+1.1169 w 
+15.1200 530.1647 m
+98.5622 530.1647 l S
+BT
+0 0 0 rg
+/F1 10.08 Tf
+35.6890 516.0000 Td
+(Endereço:)Tj
+ET
+BT
+/F1 10.08 Tf
+479.5862 516.0000 Td
+(Nº:)Tj
+ET
+BT
+/F1 10.08 Tf
+14.4000 505.2000 Td
+(Complemento:)Tj
+ET
+BT
+/F1 10.08 Tf
+330.5376 505.2000 Td
+(Bairro:)Tj
+ET
+BT
+/F1 10.08 Tf
+48.0067 494.4000 Td
+(Cidade:)Tj
+ET
+BT
+/F1 10.08 Tf
+307.9167 494.4000 Td
+(-)Tj
+ET
+BT
+/F1 10.08 Tf
+339.5290 494.4000 Td
+(CEP:)Tj
+ET
+BT
+/F1 7.92 Tf
+273.6389 296.1120 Td
+(31 3071-3235)Tj
+ET
+BT
+/F1 10.08 Tf
+557.1043 564.9600 Td
+(0,00)Tj
+ET
+BT
+/F1 10.08 Tf
+551.4999 549.8400 Td
+(90,00)Tj
+ET
+BT
+/F2 10.08 Tf
+15.1200 224.1600 Td
+(ESTAMOS TRABALHANDO COM MATERIAIS DE: )Tj
+ET
+BT
+/F1 10.08 Tf
+252.0000 223.6800 Td
+(\(MÉDIA TENSÃO, CABEAMENTO ESTRUTURADO, ILUMINAÇÃO,)Tj
+ET
+BT
+/F1 10.08 Tf
+15.1200 209.2800 Td
+( AUTOMAÇÃO INDUSTRIAL - SCHNEIDER, SIEMENS, WEG E CONEXEL\).)Tj
+ET
+BT
+/F1 10.08 Tf
+28.3450 184.8000 Td
+(ACESSE O NOSSO SITE www.universoeletrico.com.br, OPÇÃO ACESSO DO CLIENTE E VEJA MAIS DETALHES.)Tj
+ET
+0 0 0 RG
+1 1 1 rg
+28.3450 183.1247 m
+566.3750 183.1247 l S
+endstream
+endobj
+
+6 0 obj
+[/PDF /Text /ImageB /ImageC /ImageI]
+endobj
+
+7 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F1
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+>>
+endobj
+
+8 0 obj
+<<
+/Type /Font
+/Subtype /Type1
+/Name /F2
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+>>
+endobj
+
+9 0 obj
+<<
+/Type /XObject
+/Subtype /Image
+/Name /G1
+/Width 246 /Height 71 
+/BitsPerComponent 8
+/ColorSpace /DeviceRGB /Length 8684 /Filter [/DCTDecode ]
+>>
+stream
+ÿØÿà JFIF      ÿÛ C 
+
+
+ÿÛ C		ÿÀ  G ö" ÿÄ           	
+ÿÄ µ   } !1AQa"q2‘¡#B±ÁRÑð$3br‚	
+%&'()*456789:CDEFGHIJSTUVWXYZcdefghijstuvwxyzƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚáâãäåæçèéêñòóôõö÷øùúÿÄ        	
+ÿÄ µ  w !1AQaq"2B‘¡±Á	#3RðbrÑ
+$4á%ñ&'()*56789:CDEFGHIJSTUVWXYZcdefghijstuvwxyz‚ƒ„…†‡ˆ‰Š’“”•–—˜™š¢£¤¥¦§¨©ª²³´µ¶·¸¹ºÂÃÄÅÆÇÈÉÊÒÓÔÕÖ×ØÙÚâãäåæçèéêòóôõö÷øùúÿÚ   ? ýS¢¾7ñ×üŸÃ¾ñ¿ˆ|7?ƒu;©´}FãOyã¹Œ,­`@Jæ¾¶ðÞ´ž$ðî•«ÅCý¬WKœ”€>ã5ÕWZ„TêFÉí±Œ+S¨Úƒ½*(¯‘>)ÿ ÁDô…¿õï	ÝxCR½¸ÒnZÙî!¹Œ$„ riPÃÕÄÉÆŒnÐT«
+*óv>»¢¹†^8‡â_ÃýÅVö¯e¯h—io#hÃ€Hã5Ó×;N.ÌÕ4ÕÐQE†Vˆuuðþƒ©j™,­¤¹1©Á`Š[÷Å|‰àÏø)o†üaâÍCOê¶Ï¨ÝGl&k˜Ø&ö8ïŒô®ª8ZØ„åJ7Ks
+•éÒiMÚçØ7×’ÚD+‹æ-.Š@õùÙF?óYçRÖç;­´X¢AÁ…èóì#I?à@õã¡;UÕ»Ü T¹–Øç;¢
+Iöù”×½¬u©$¾þÿ ó1%O]–òåÑ´°·»9$î‡îñÏ~k>ëAñ­ØPÞ0Óì±žl´M¥¾¾dòtö©ëÛvoZO3Êó_†c¸„Ônsì¡ÀØU+Ÿ‡>½EK¿éW@ ÝYÇ+qêXO¹¥ìâß¼ßõóF‘ÄÔ†‘Œ~äÿ 4ÙÇÞ#iã[øÉ=Œ¨ç(ƒK¶UÝ"Hç>þŸ#s¬ü=‰Uføó©\œìòíüGjÎO#¤Iº½’ÏÀÞÓÿ ã×Ãú]·ýq²?’ÖØéÅ_³£y7ó·á©ªÇbWÂâ½#Ñ#æk­sáW˜«/ÅŸ\>qþ­j“ô‰qX×Ò|Õnî¼eñþ`+¼šÌ§@Ê>§zúÎŠÑCÚiú¯þDÒ9®e†»^—_©ñ½êü…Ì×þ"îPX/Ùu¬Ÿ¦`Å`¾£ðf_3Ä_mžãÔÂŽ™?ê‰â¾æ¢±–R\Õ)6ýWÿ "j³¬Ý|8©~?æ|ªë³…©a?ÅßˆZiôc¨®3ÓïÚš‚|#º!4ŸÚ‹ÇÈ CÝÍèØ Æ9DÏAÇç_}‘ž¼Ö%ß¼7¨Ç×‡ô»ž¿ë¬£~½z­RÂå×÷©Kÿ _ü‰²âê6µtýbŸçsãH5m"mßÙµû¤§ˆ“T”mÝž4’ŒÙÇ¥jiRüZy$þÑ¾ñ‘Ÿ)îífw#8U79ÇÞ³_FkŸ³‡ÂÏsð÷Ã’??<zlQ9Ï_™ ?­pšïìðK\‰€ðÓe'>u…ýÄdqØ+úRú†\ôR©zIÿ òKî5f‘þ-:5?ÅJŸÿ #úœKøö­ðÜitt¿xžÙFãå,MæÀÀÑ\ð;sÅfÜ~Ø_ü*7‹¾É¶Hg.-÷`rU™\?—|ÔºŸücÃ¶3|ãïxY$Y†ìžFÏ,ôÀëÚ°ï?goÚƒáÂyÞø´|ML<»MJåšBA‹€éŽ ûÃ­)„ôÃc\_÷—êÔ¿?¸éP–˜Üª”—÷9 ÿ òWúŽ‡ÿ ðdî#×<7®h²dXçO|üÊß’žý;ú„k_…>21¥·‹­,grG“ª´ ö¤yíƒßx¯ˆ<qñ—âŸ‚¼Èþ/üÑõËy³©\éMi$‡Øº€…9ÝŸ®r©â?€Ÿå!]ø]¨È@U¸Q°É'zâEŒ±®{áW*Ï0ëž—-hùhß¥¿Èî¡ŽàÌÁòVUp²õçŠõºæ?X,u]RÖ;›;˜ní¤I pèÃ§pjÅ~QÝø/âWÁ+dñ…uéî¼=)-oÃWÆkIäÚqÎ3µÆzz×Âoø(gˆ4›˜¬ü{a¹bÌj61¬71Ž2J#Ž¼ ½zö¯gp£QÑÇSt¥çª=ÌG âkaþ¹“W†&Ÿ÷t—Ýv¯å{ù TW?àOh|3i¯xzú;ý:äpè~dnèãª°îô‘’’R‹ºgåõ)ÎŒÝ:‘jKFž?3ñoöƒÿ ’÷ñ+þÆmOÿ J¤¯ÙÏ…ŸòL|!ÿ `{?ý•øÇûAÿ É{ø•ÿ c6§ÿ ¥RWìçÂÏù&>ÿ °=Ÿþ‰JûçýÖ‡õÑø•?®çQ_‹µçüœ¿Ä?û
+?þ‚µûI_‹µçüœ¿Ä?û
+?þ‚µ‡ÿ ~ŸªeðGÔýNý•N?fÿ ‡Gþ ¶ÿ úgMûd|·šH¤ñîœ’FÅYJKÁ}ÊÐý•ÿ äÛ~ÿ Øßÿ A¯Ç¤¶¿ãÏì´B÷º—Ù„Œ2¼»rG¶k,_KR³«&¹_Ku¿tûÖÄJ…8r«Üý|_Û7à³0ÇúnO¬ƒÿ e®ßÀÿ <ñ)Ý<1â3Z•0Z+[€\qŸ»× ô¯†î¿à•úß•þã?ÌÏüµ¶|cð¯’üK¢ø›ö|ø¯y¦‹Óaâ=íqug!pÔƒÇqï[SËpX¤Ö«æ]ÿ á‘„±•©4êÂÈý¶ñM½•ß†uh5)šßO’ÒT¹™N
+FP†aÁè2zøáÇÁoÙ¦ËÇÞŸGø­=ö«ôMklùU–@Ãj’P“ï_cZø¸ø÷öu:ì—RðãÜJ¸Àð=·f¿¾	É_ðoý…mÿ ô`©Ê¨JtëZn6ío?&,mX'ãsöÇŸ´_ÃŸ†:ñÑ|Qâ›MT,ßg$ÜQ³µ†ŒÊº_|EðçÄýûgÂú¬:Æ™æ´i€»×^@<dWÉðS?„§ÄÒ<ugû½O²Ü…co!È8ÝnO 'Þ¼¯þ	•ñ[ûÇšÇïnJÚk0ý¢Î6ÆÄyÈÉé”Ï©¹c€§WñT›æ[®šoÓ¶¾‡D±2…uJkF~•×•x«ö¤øWà~óDÖügaaªÙ¿—qláËFÝpp¤fºÏŠ>;´øcð÷_ñMïú.ÑçÆ3¹º(Ç»?üoøsá=_ö‰øác§>ùï5Í@Ïw&Iòâ-ºFÏPsôâ§.ÀCÕ¬Ú„z¯éô+‰t\cvÏÚ_x›Lñžc­è·i¥^ÇæÛÜÆYÔdÚ¹¿üpðÃ™„>$ñv•¤ÎIL×+æ:‚£$~"¼_öÌøÓ7ìÝðsLÑ<&>Åªj+ýŸe<{wZDª7H÷±À8ë“î>ýžfÿ þÔ%ÕœvpZ-æ¥|ZFfcÐwf>½¸«ÂeÐ­JXšÓå¦¶îÿ ­½H¯‹•9*pä~—·í›ðYXƒãý7#ŽCÿ ²×kðçã/‚þ--éðˆ-µ±fTOän7g0•ñt_ðJé63ÇI¿¾ÛCç_CþÊß²´³dïüO_Z›Sdÿ –"5T~¤“úVxš9t)7B«”ô²iÛ}~Êé~¦”ªW”’œFÝÿ íðwL½žÒçÇztW9ŽD+!*ÀàŽ±¦Aûcü¹”"ü@ÒÔžòAù•¿#|ObºŸÅ=ZÍ˜¢ÜkSBXr3ú×Ñßµì3eðá¬~,Ó¼Qs¬*ÝÅm5½Í²ÇÃƒ†R÷=ë×žQƒ§(Bu$¥=¶ÿ /3Š8ÚÓŒ¥«-ÏÓOø³Fñ®­ êvº¾›6v]ZJ$FÇ^EeøçâŸ„~[Ç7Š<E§èi'Ü“…fëÈ^¤q×ðçü»ÄWÍ«øëCk‡m9míïÊ¬›™I™~Uò?Åïk?þ.ëz–­vg½»ÔÞ33á!@åQeP1\”²oiŠov6×®»KËF3¶¬ý\oÛ7à²±ÇúnG,‡ÿ e¤ÿ †Îø-ÿ Cþÿ |Kÿ ÄWË:7üÖòëN·šóÇ$ÒF®VÞØ²‚FNyõ{þ\èzÿ ÉOþ½OÕòŽµå÷?þD¥[×ðÑ÷w†<M¦xË@±Öô[Ä¿Ò¯cÛÜÆY÷ Ô-ñ¶à=)õ/kz5Šõžòaž3×¨é\¿ƒ´kÙïà}Ž£|×Z…ô¶3Ý¤XÔ±Ú¹êzÜâ¿%>'üPñŸíIñR'3ÞÝêKk¥hñ11[«64^€ò77~I5ÉƒÀ,eIòÊÐ_.†˜ŒK¡§¼ú¤zÏíÓð:I&Ó/<B/àrÑ¸û“@àz¸ öõ¯ø›û,|#ý¥4K^ø/¬éV~%·F•ìl_m­Ãg;^3$œã  2¹ëCÿ ‚XÝÍáµ—Uñ²[k¬¡¾Ïok¾$”¹98ädÕò·ü!ã_ÙSâëX5ëiºöšÉqkdçdñ”uõSŒ#¨ ô¯c	†Ã¹?¨W|ë£Ùúè®yõªÕKý¢š³ûÌß |Oñ‡À¯]*î[¢•­µ&ãç·¹Úv¼SD~Vsï^·ñïÃÂž2ðÅ¹°Ñ<]¦I4öëi0b“DNT08>ÿ pÚuÿ ÚÅþ#ñ¾­$ƒ-ì—z¾·"í·‚G;Ìq®ròÙ9ÆIàW¶Ïðó_ý¥üQ£èÞÑ®´Ïø~Ò=/L»Ô”…Ž2ÊÀ`»°f8õÀÎ|¯,.'
+Š–"êÉn—Ÿ‘ú÷…•1xu\uIò`ãÏ)iþÊ]¯®šÛÔÑý„<Gâý?Ç> Ó¼7
+ßZË¦›‰í'lDeUþð°Ì=Á>œö¯ÀO€ZÀŸ+ZµÀ{¨¸ùåoîƒÙaß©ö+çòÌ\jKUø_¡<SžáslÖ®+I8;$ÚwvV¾ýzu±ùûB||ø”?êfÔÿ ôªJý’ø1©A¬|ð=í³‡‚ãC²‘±8>ã¥~sþÞÿ ³^»à¿‰Z¿t»	o¼+®Ln¦ž.lîÌ¢@Ê¬C8nœNG8_³÷íßâÏÞƒÃi¶Þ"Ñ-Ù²ÜÈË-º’IEaÕrIÁéž+õ]f8*RÃê×O—æ~EF¯ÕkMUÒçë=~&~Ô:¬:×íñîÞA4'Z¸]yc”ãÔ|½kèÁO|W­h—6>ðÝ–‡u<m¿yZY!Ïñ éž½s_:üøâ¿ÚÆ±iÚE¼²[¼ÛõZ|ùVèH.ìç«`ð½I#×4ò¼òÿ i[h­…‹¯O,)+Ÿ¬²ý´¶Ÿ³—Ã¸æ¢hvÍµÆ`ÐŠü€ð¿ü–'þÃ°ÿ é@¯ÜDµðÏ‡´íÅJYiö±Ú@¤äˆã@ª? +ðûÂÿ òX4ŸûÃÿ ¥°É%Ïõ™w·þÜtcW,i'ýl~éWã·íÏÿ '=ãúéþŠZý‰¯ÇoÛŸþN{Æ?õÒ/ýµçd_ïŸöëüÑY—ðãê~‹|*ÿ “<Ó?ìY›ÿ E½~Rüÿ ’¿àßû
+Ûÿ èÁ_«_
+¿äÏ4Ïûfÿ Ño_”¿¿ä¯ø7þÂ¶ÿ ú0W§“ü8ë¹ÅŒøiz¶>7ð|!¬xwRŒIc©Û=´¡†pc?Áü+ñfÞ]cözøÚŽU¡Õ¼3ªç£,½?Ú^ÇÖ¿p«óoþ
+kðh¾0Ñ¼yc KmV?²^•ÿ žè>VÀ×©=Àü82Jê5^{M~?ðUÿ ¿OÝUc¼N‹þ
+û@[kß|áéZzÞ=bëÊpØ‡ŽAÜI÷ÁÍ]ÿ ‚d|Ún³ñP·Ä³±°ÓKŽBeqÜg!}|#áÍ#WøâÃöï5åíÌ‘iöˆÙrŠ[…Ðn'ûðãÁ6_<¡øgOcµÓmR 8f.Üú±cø×^b£—àã„ƒÖMßÒÿ ðÈÃ|MwZ]‚¿àª^ü%þûÿ eûÆ?»¿Ì_×ó?Á«O‹7–º‚|6‡Zžên×IMØlpX}+ô‡öäýŸï¾8|.Ž]
+qâMSumn¤sR1ž­Ð¯#}kóçàíâïÙ_Äz¼új\Cuˆït@4x‘sµ¸ä0Éúƒ]™mok€öt’”ãÑúÿ _‘ÏŠ¦£ˆ¼ôO©Öÿ `þÕ?ôñ§ýø?á_\~ÂV,­üRŸ¡Ö`ˆ´FÑuuÛÎâ€óõÇ·µyÿ ‚¨êçÀ¶Ùÿ ¯¶ÿ 
+úöOýªgý¤ÿ ·„úz1Ó<¼ysß»ê+ÍÇKðòö˜u¦ª×Z¯×C§
+¢p›lü·Ôÿ ä³]ÿ Ø}ÿ ô ×ígŽ>x{âg‡N‰â}._JwIM´ä….¿tðAâ¿õ?ù,×öý(5ûšŸq~•®{'a(»=öÑe©>tü¿S…øuð/ÀŸ	oo.ü#áËmâî1ò[³“"ƒæ=ëó»öýƒ> èž<Öoü!£7ˆ|=yróÚ‹YCO±Î×SŽA={â¿Skà_ÿ ÁNï4jÚd^	‚Xì®å¶W{²r¹<{W›—VÆûIN‚çz^ïîêvb¡C•*®Ý¬x%§Â?ÚvÆÚ;x4ŸGcj ¸l(ô?JÄ—ã/Ç_€~&KmSZ×´kõÛ1±ÕIxå^ÙVÈaô¯ ÿ áê7ÿ ô"Ûà[…|ßûM~Òº—í%âM3P¼Òmt‹m:ÜÁ0ìw6æ,Çž½‡WÒá–"µGF*/w§üÈŸ²„oJ£mzŸpxÛã<¿`Ox¦;²jMfm¯¡Oº²$Ñ‰
+ã±C»ñ¯Ž`Ï²ÃTø/í{1›¿+Ìéæ}–]¿§¾;â¾êýŽ>Í¦þÊ1xsÅ6²B¾#[›‰ívÉ3«Ô|­°„Jüïø©ð£Æ²ÏÅD¿h´šÆè\é:ÌKˆîÈê}}Tû‚+—èÉb04›r·£VÓ½ŽŠêkÙW’½­ëÌý©¯ÍÏø*ƒZŸˆ^TöÑ¥Ìe Þ_›ògÛ>f?ÓÐ¿à©šŒòµoCu­ª[›{’³¬ÈFyôs_-øËÅ^7ý«>/I~l_S×õ&Xmìl£ù ‰N¢®ybz’Iæ¹òÌº¾¿¶®¹cú­àzšb±TëSä§«gÖÿ ðN¯„:þkZ·ˆìR†ÓX{{[yfa &&g1‚o™FãÛé_zØØ[i–±ÚÙÛEimÂCEïÀ
+óÏÙÏàü?>èžGY¯!S=ôê0%¸s¹Ï^ƒ…Ê+Òëæqr§WR¬ÄÏr«ËNY¶¢´WÑz.EW(†Mw<R¢Ë‚¬Ž2¬PGq^Kâ/Ù/áŠ.¦º½ð&”·R’ZkxÌ$“ß@'ê+ÊµOŽ~/øñÆ:Nãßü3Ñü=¨6˜¬¬R\^<lË#¨ãSÓ±Q×&½ûá$÷×>‰õØxòèÊûµm:¢‹·îÀŠü¼ó×ž•Í†Ç¹O÷­õM-´èïøîc‘ÔÀQŒñ2Ý½ÛIµuuwËÉ·E&üŽGýŠ>hÅJø"Îñ•·¼w—ðÁlõì‡t¿i±iÚ>Ÿm¦XÄ0–ö‘,h?ßÞ´iáIö®ú•êÕþ,Ü½[™óð§iakÉ­ÿ e„vº¤zŒ^Ò’ö9„é0FÈÁºõÏ5ìÏñ]ø‰áŸ]ë÷‚öâÇÄWš|"HöÃÍ‹… dòy¯`¬(b%(sÓm'çc·x<D°Õ’rÍ|®æž.ý›>xó_ºÖõÿ iÚž«s·Îº™NçÀ gÐ
+ôºà¾9|Pà÷Ã=cÄÆ$¸¸·A¬I˜áÛ<ž™Æ3’)ºÏE&¬·]¾Ft0²ÆÖ†œy¥&’^oDiÛÁáOÛXx¶¶Š{I#·Ò'6àÜs…Á#$ŒóŽ•Èé²—Â]T´Ô¬<¥Û^ÚJ³C2£Ž§ ò}kÈ|âx†ÿ Nñ÷Æÿ h·:ŒQ<öV–Vr\…`…Š¶GÊ0zÇýmYa±u&¥ÊÚ^»ýÍþ6ô=Ó*†_8BMIÛ]%£]¹¡oð¹/0¬øÃÿ 4&Ñ¼M¥A¬im"Êm®+¹~éãÒ·ëˆø§áÿ kú]œ~ñM·…ï£˜´òÝY%ÊËÞ˜`pAÇJÑÊP÷£ºí¿èyÔhÂ½EJsQO¬¯eëdßÜ™—áÙ³á5ë}kAðf›¦ê–Ùòn¢BY	$džq^—_%|ñÆ_Šú¦­5ÏÄkK};EÔžÊê¢@Ï8RÃ*@Îß^3Þ¾µ¬©bg‹µš7wù³ÐÌ²¯ìzßVu!)-ù9´õ¼cÓµÂ¸¯üðÄ9V_xKIÖ&RH–æÕKäõù‡?­vµàŸµÄoxÏÁñxc[‹@—TÔ^ÚâîkhæU@™Éãê*ªWú´]tí¹†,Ï$NWÞöÑ7­“}:&lØ÷àÑ9ÿ …}¤ÿ ßþ5Ù|>ø?àß…Kx¾ðõž‡ö²¦sl¤1Ó$“ë_;ÇñâÃßˆ^Óõ/ˆ~ø‘a¬Þi¬t[h~Óã;€Ÿ§<šúæ<uLJ”%)iºnÿ «_×slÃ&y[§)rÉM6œS[;?Š1’Õv<šOÙGá$º¡ÔŸÀº[^™¾Ðf(Ù2gvî½sÍzÀ¥¯ý©¾ k¿¾ÛjÞ½ïªÚÚ´¦$“1»ÃüzÓÄâe
+n­Y6¢¯ÜåÀ`^3-”¦Ò]ß{#ØkÈ¯ÿ d¯„íÅå×€ô©®n$ie‘‘²ÌÇ$ž{“^áûù5]M½˜*ËsmÎaC2‚qíÍ_­¡Rtß¹&½Ž:”âß,Òv<oþóàÏýí'þøoþ*´tÙsáG†5H57ÀšE½ì)¼Å¨ÜMt¾ ÿ Â«øg¯ø¤[­ÓéÐŽ8VveEÏ¶Xf¼·À^øáã}Kñ¥ñÃÃßCÒéPhPÜ•Fù¶³’¤¸éœgÛœjæ£/f¥)>Éôó»G©…É¡[ñu'
+p¿*rOWk´”c'¢jîÖ×sèZÆñWƒt/iRi¾ Òlõ‹á ¼„H¿¯N•°:zÒÕ¦Ö¨ó¾Œð‹ßØ{à½î£Ùðd ˜ažE‰¹Ï+»ð¯KðÂŸü/µ’ßÂžÓô$—ýcZBäà™¾ñè:šåÿ iO‹w~O­éÖñ\êsÜGch³‘dpÄ1ðñÿ ê>aãËïŽŸü¯üe§x‡ìAfÕ46Ò¡‰€Ú²§ÌØ$F=¸äcˆÌj]Óœ¥$•Þ·I|ß—NÇ½€áùbéÂ´g
+~ÒN0æºr’µÒ´]·Jòi]î}GEdxGÄ1x»Âš6»ypjvPÞÆ…·mY8ïÃV½\d¤”–Ìñ'	S“„ÕšÑ…QTAò_<CðçâG®ÿ áOè4sQ“P²žââÎl÷±o(	ÁÂÄaF>Ps_E|#¶–×ÂÞ´øxþ{Ÿì[) –1Ó÷›¡2ßŸQ^m,0õ³Ûµ—]wµþö}&aWÌè¨W‚æV÷“Ý••âæá¶öŠüÎÖŒŒQEzGÍŸ3xÃÿ >øÆ:v“àVñ·‡5]RMJÊînÞÑ¢J²JF[•€ÛßŒ}¤Ý\ÞéVw–gO»–’kF‘d09PY/ƒ‘‘ÁÇQ\”iºRqRmtZiø_ïlö3Áæ-U©N*}d¹¯++]§'Ÿe"Ýy¯íðºoŒ
+5ÚJ±_¾Éí|ÆÂ4¨rªÞÇŸÇ³EÑ8F¤\%³ÐáÂâj`ëÃEÚPi¯Tîðg„uýËH°Ôÿ f_\ßZá—X†ûL]åp<ì/œÇœç=+êÚ(®\5Gš1zz%ù%øž†g™K2”jN
+/]œÞÿ ãœ­ò²
+(¢»Oð¿ÙsáÏˆ¾EãuñŸýžuf[»_ßÇ'™;ß#pG½ÒŠ+
+1P¦¢º†aŒ©ÄÏU%)[m´Iyö
+ðŸÚ“áf±ñHø"ßLÒSW´²ÔÚ{èä–4Uˆ¦2C°ÝÏa“EW¦ªÓp–ÏüÃ/ÆÕËñ1ÄÑø£{_Í5Ñ®æ¥û>†<7âßøNÎïC•~Ï©Ù+Ä­iŽ“D$eçðIÈÏa_JÑEMP¢å+&ïo]ÍqÙ|ÁRx‡yArß[µ}/w­¯nšnãŸµW€µßˆßí´¯Xÿ h_¦­krÑyÑÅˆÑ‰fË²Ž=3š(§ˆ¦«Q•9lÕŒ08¹àqTñT’rƒM_m;ìz†¬æÓü9¥ZÜ'—<‘E"d¬¨u¥EÐqÉó7'Ôá¾6ü6þëžÇoqy6óÊ¹Ê¬O¨Î6’2@cÁè|çÁ7øÇáoèú§ð‰u,!ŠÒMNÓÄv‘Ç*¨æØ–‘ž¾Ep×£ï{XIÆ[im·ê™ìás'Kð•iF¤/Ì”¹´m$Úq”^©+§u¢Ð÷áÓÒ–Š+¸ñ(ý¦¾_|cøYs¢éRÅ­oqõ˜œáD6“Û!›ñœg‘æ?o¾3ü]øx|'Ã˜tíB;xu-nç[µ’Óp- Ž3»c< ÄŒƒEçb0êsº“\ÊÎÖÕ|Óî};«‚§N›¥	û99AËšñ“¶Ö”SÖ)ÚI«£èÏxn?ø?CÐ!”Ï•cŠJWiuŽ5@qÛ;kfŠ+ÐŠQI.‡ÏÔœªÍÔ›»nïÕ…QLƒÿÙendstream
+endobj
+
+10 0 obj
+<<
+/Creator (Rave Reports \(http://www.nevrona.com/rave\))
+/Producer (Nevrona Designs)
+/CreationDate (D:20230327132309)
+>>
+endobj
+
+xref
+0 11
+0000000000 65535 f
+0000000023 00000 n
+0000000097 00000 n
+0000000151 00000 n
+0000000220 00000 n
+0000000418 00000 n
+0000011077 00000 n
+0000011134 00000 n
+0000011257 00000 n
+0000011375 00000 n
+0000020253 00000 n
+
+trailer
+<<
+/Size 11
+/Root 1 0 R
+/Info 10 0 R
+>>
+
+startxref
+20401
+%%EOF

@@ -1,0 +1,135 @@
+Grupo Usuários:
+
+1 = administrador nível 1 - tudo
+    Raul
+
+2 = administrador nível 2 - tudo exceto gerenciamento
+    Fernando Arantes, Fernando Lopes, Cristiane, Helena
+
+17 = administrador nível 2 - tudo exceto gerenciamento
+    Carlos (aceita pedidos do usuário 18)
+
+18 = compras materias primas
+
+Autorização - autorização + solicitação
+3 = Operacional - Carol;
+4 = Financeiro - João;
+5 = Negócios - Diego;
+6 = Administrativo - Paulo ou André;
+7 = P&D - Emerson;
+8 = Assistência tec - Marcelo;
+
+
+9 = compras - cotação + pedido compra material
+    Gabrielle, Ana Paula Moura
+
+10 = financeiro - pedido compra serviço
+    João, Milena
+
+requisição - Requisição
+11 = Simone - Henrique  - Jonas -
+Patrick - Nathan - Fabricio - Priscila - Luis - Leyris -- OPERACIONAL
+12 = Fernanda - Isabela Garcia - Ana paula moura - Bruna - Raul -- ADMINISTRATIVO
+13 = Hugo, Jefferson --- Assistência técnica
+14 = Eder,Luan,Walter,Ana Paula Gomes, Ralfy --- P&D
+15 = Laura - Anna Júlia - Negócios
+16 = Milena - Financeiro
+
+
+
+
+Versão 1.010
+Data: 07/12/22
+
+---Pagina solicitacao_material.php 
+- Formatação dos campos para ser responsivo em resoluções menores;
+- Remoção botão "Criar Material" da pagina Requisição de Material;
+- Reformulação completa dos campos da Requisição de Material;
+- Remoção classe "select2" do <style>;
+- Ajuste das classes para ficar responsivo para adaptar melhor a celulares;
+
+Versão 1.011
+Data 09/12/22
+
+---Pagina solicitacao_material.php
+- Formatação dos campos select;
+- Alteração evento no campo material de "onchange" para "onclick";
+/ Alteração campo unit de varchar(250) para varchar(50) nas tabelas "po_items" e "stock_list";
+- Reformulação do campo "unit", adicionado valores fixos;
+- Adicionado .trigger('change') no campo "unit";
+- Adicionado "*" nos campos obrigatórios;
+- Nomenclatura alterada de "Und" para "Tipo";
+- Inversão da ordem dos campos "Qtde" passa a ser antes do "Tipo"
+
+Versão 1.012
+Data 12/12/22
+
+- Adicionado "div=class-body" em todas etapas;
+- Alteração cabeçalho;
+- Atualização campos;
+- Remoção "if bo";
+- Adicionado css classe ao label;
+- Realocação das div's;
+- Alteração na formatação campos de todas etapas;
+- Realocação do width do label para os inputs;
+- Replicação das alterações para as paginas:
+- Autorização, Cotação, Aprovação, Omie e Recebimento;
+---Pagina visualização;
+- Formatação da pagina;
+- Inclusão campos faltantes;
+
+Versão 1.013
+Data 12/12/22
+
+-Alteração de todos "select" para classe "select2";
+---Tabelas
+- Remoção do <thead>;
+- Adição css nas tabelas, arquivo custom.css;
+- Formatação dos inputs da parte cotação;
+- Modo responsivo;
+- Remoção dos values dos campos cotação;
+
+Versão 1.014
+Data 13/12/22
+
+- (Em andamento) Nova funcionalidade, escolha entre cotações;
+- Remoção do headScroll em todas paginas;
+- Ajustes Requisição para download;
+
+Versão 1.015
+Data 14/12/22
+
+- (Em andamento) Nova funcionalidade, escolha entre cotações;
+
+Versão 1.016
+Data 15/12/22
+
+- (Em andamento) Nova funcionalidade, escolha entre cotações;
+- Remoção completa do campo de Motivação da compra;
+- Alteração campo de "Observação" do material para "Observação / Motivação";
+- Conclusão da nova funcionalidade;
+
+Versão 1.017
+Data 15/12/22
+
+- Alteração campo indicação do fornecedor para campo select;
+- adicionado evento trigger ao select;
+
+Versão 1.018
+Data 16/12/22
+
+- Adicionado botões na pagina de Autorização;
+- Pagina Autorizações recusadas criada;
+- Pagina Autorizações aprovadas criada;
+
+Versão 1.019
+Data 18/12/22
+- Adicionado tabindex -1 em todos inputs;
+- Alteração <input type="date" class="select2" value="<?php echo $row['prev_data'];?>"> para <?php echo date("d-m-Y", strtotime($row['prev_data'])) ?>;
+- Removido inner join da solicitacao_material (inner join item_list i) e (SELECT i.cod_item)
+
+Versão 1.020
+Data 19/12/22
+/ Adicionado campos para verificar cada etapa da solicitação;
+- Adicionado botão para verificar todas etapas do processo;
+- 

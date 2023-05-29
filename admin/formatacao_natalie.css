@@ -1,0 +1,54 @@
+
+/* INDEX REQUISIÇÕES PARA APROVAÇÃO */
+
+.bgcolor-text-aprovacao {
+    background-color: #55B77E !important;
+}
+/* INDEX SOLICITAR REQUISIÇÃO */
+
+.zoom {
+    padding: 50px;
+    transition: transform .2s;
+    /* Animation */
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.d-flex-mat {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 200px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.font-color-solicitar {
+    color: #f2f2f2;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.zoom:hover {
+    transform: scale(1.5);
+}
+
+.bg-material {
+    background-color: #F29F05;
+}
+
+.bg-material:hover {
+    transform: scale(1.5);
+    background-color: #F28705;
+}
+
+.bg-servico {
+    background-color: #035AA6;
+}
+
+.bg-servico:hover {
+    transform: scale(1.5);
+    background-color: #0B2B40;
+}
